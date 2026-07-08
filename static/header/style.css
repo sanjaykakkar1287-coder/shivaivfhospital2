@@ -99,7 +99,10 @@ body {
     position: relative;
 }
 .menu-item:has(> .dropdown-menu:hover) > .dropdown-menu,
-.menu-item:hover > .dropdown-menu {
+.menu-item:hover > .dropdown-menu,
+.drop-item:hover > .submenu-child,
+.menu-item > .dropdown-menu.hover-open,
+.drop-item > .submenu-child.hover-open {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -138,7 +141,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateY(15px);
-    transition: all 0.3s var(--cubic-bezier);
+    transition: opacity 0.18s var(--cubic-bezier), visibility 0.18s var(--cubic-bezier), transform 0.18s var(--cubic-bezier);
     pointer-events: none;
 }
 .premium-header .dropdown-menu {
@@ -147,9 +150,9 @@ body {
     margin-top: 0;
 }
 .premium-header .submenu-child {
-    top: -8px;
+    top: 28px;
     left: 100%;
-    margin-left: 10px;
+    margin-left: -10px;
 }
 
 /* Override Bootstrap interference */
@@ -169,7 +172,7 @@ body {
     font-size: 0.9rem;
     font-weight: 500;
     border-radius: 8px;
-    transition: all 0.2s ease;
+    transition: all 0.9s ease;
 }
 .premium-header .dropdown-menu a:hover, .premium-header .submenu-child a:hover, .premium-header .dropdown-menu a.active, .premium-header .submenu-child a.active {
     background: var(--bg-light);
@@ -179,37 +182,21 @@ body {
 
 /* Desktop Hover Animations */
 @media (min-width: 993px) {
-    .premium-header .menu-item:hover > .dropdown-menu {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-        pointer-events: auto;
-    }
-    .premium-header .menu-item:hover > .dropdown-menu:hover {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-        pointer-events: auto;
-    }
-    .premium-header .dropdown-menu:hover {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-        pointer-events: auto;
-    }
-    .premium-header .drop-item:hover > .submenu-child {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-        pointer-events: auto;
-    }
+    .premium-header .menu-item:hover > .dropdown-menu,
+    .premium-header .menu-item > .dropdown-menu.hover-open,
+    .premium-header .dropdown-menu:hover,
+    .premium-header .drop-item:hover > .submenu-child,
+    .premium-header .drop-item > .submenu-child.hover-open,
     .premium-header .submenu-child:hover {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
         pointer-events: auto;
     }
-    .premium-header .menu-item:hover .drop-icon {
+    .premium-header .menu-item:hover .drop-icon,
+    .premium-header .menu-item > .dropdown-menu.hover-open + a .drop-icon,
+    .premium-header .drop-item:hover > a .sub-icon,
+    .premium-header .drop-item > .submenu-child.hover-open + a .sub-icon {
         transform: rotate(180deg);
     }
 }

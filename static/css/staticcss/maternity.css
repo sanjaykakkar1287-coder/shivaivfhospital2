@@ -1,0 +1,227 @@
+
+        /* Variables specific to Maternity page */
+        :root {
+            --primary-blue: #0f4a78;
+            --accent-sage: #9AAF9E;
+            --text-dark: #2c3e50;
+            --text-gray: #64748b;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --shadow-soft: 0 15px 40px rgba(15, 74, 120, 0.08);
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        /* Common Utilities */
+        .badge-element-v3 {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 22px;
+            background: rgba(154, 175, 158, 0.15);
+            border: 1px solid rgba(154, 175, 158, 0.3);
+            border-radius: 50px;
+            color: var(--primary-blue);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .shimmer-text-block {
+            background: linear-gradient(90deg, var(--primary-blue), var(--accent-sage), #4f46e5, var(--primary-blue));
+            background-size: 300%;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: textGradientEffect 6s linear infinite;
+        }
+
+        @keyframes textGradientEffect {
+            0% { background-position: 0%; }
+            100% { background-position: 300%; }
+        }
+
+        /* --- Hero Section Styles --- */
+        .obstetrics-intro-frame {
+            padding: 180px 0 100px;
+            background: linear-gradient(-45deg, #fdfefe, #fff0f5, #eef2ff, #f0fdf4);
+            background-size: 400% 400%;
+            animation: fluidBgMovement 15s ease infinite;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes fluidBgMovement {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .center-heading-holder-x {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .obstetrics-intro-frame h1 {
+            font-size: 56px;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -1px;
+        }
+
+        .obstetrics-intro-frame p {
+            font-size: 18px;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        /* --- Services Grid Styles --- */
+        .clinical-offerings-zone {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .clinical-offerings-zone h2 {
+            font-size: 42px;
+            color: var(--primary-blue);
+            margin: 0 0 15px 0;
+        }
+
+        .matrix-layout-deck {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+        }
+
+        .profile-capsule-item {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid rgba(15, 74, 120, 0.05);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+            text-align: center;
+        }
+
+        .profile-capsule-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-soft);
+            background: var(--white);
+            border-color: var(--accent-sage);
+        }
+
+        .vector-emblem-wrapper {
+            width: 75px;
+            height: 75px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-sage));
+            color: var(--white);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 25px auto;
+            transition: var(--transition-smooth);
+        }
+
+        .profile-capsule-item:hover .vector-emblem-wrapper {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 20px rgba(154, 175, 158, 0.4);
+        }
+
+        .profile-capsule-item h3 {
+            font-size: 22px;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .profile-capsule-item p {
+            color: var(--text-gray);
+            line-height: 1.7;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        /* Global Animated Border for Maternity Cards */
+        .profile-capsule-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 2px;
+            background: linear-gradient(90deg, #0f4a78, #9AAF9E, #ffb6c1, #0f4a78);
+            background-size: 300% 100%;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            z-index: 10;
+            animation: activeMaskBorderShift 4s linear infinite;
+        }
+
+        @keyframes activeMaskBorderShift {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 300% 0%; }
+        }
+
+        /* --- Facilities Section Styles --- */
+        .amenities-overview-block {
+            padding: 100px 0;
+            background-color: var(--bg-light);
+        }
+
+        .split-asymmetric-flex {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .text-column-panel h2 { 
+            font-size: 42px; 
+            color: var(--primary-blue); 
+            margin-bottom: 20px; 
+        }
+        
+        .text-column-panel p { 
+            color: var(--text-gray); 
+            font-size: 16px; 
+            line-height: 1.8; 
+            margin-bottom: 30px; 
+        }
+        
+        .bullet-feature-index { 
+            list-style: none; 
+            padding: 0; 
+            margin: 0; 
+        }
+        
+        .bullet-feature-index li { 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+            margin-bottom: 18px; 
+            font-size: 16px; 
+            color: var(--text-dark); 
+            font-weight: 500; 
+        }
+        
+        .bullet-feature-index i { 
+            color: var(--accent-sage); 
+            font-size: 20px; 
+        }
+        
+        .media-graphic-box img { 
+            width: 100%; 
+            border-radius: 30px; 
+            box-shadow: var(--shadow-soft); 
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 992px) {
+            .split-asymmetric-flex { grid-template-columns: 1fr; }
+            .obstetrics-intro-frame h1 { font-size: 46px; }
+        }
+    

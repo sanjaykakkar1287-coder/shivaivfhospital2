@@ -44,10 +44,10 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                             <li class="drop-item has-submenu">
                                 <a href="#" class="drop-link-nested">Medical Departments <i class="fas fa-chevron-right sub-icon"></i></a>
                                 <ul class="submenu-child">
-                                    <li><a href="gynecology.php">Gynecology</a></li>
-                                    <li><a href="maternity.php" class="<?php echo ($currentPage == 'maternity.php') ? 'active' : ''; ?>">Maternity</a></li>
-                                    <li><a href="diabetes.php">Diabetes</a></li>
-                                    <li><a href="orthopedics.php">Orthopedics</a></li>
+                                    <li><a href="" class="gyne-btn">Gynecology</a></li>
+                                    <li><a href="" class=" maternity-btn <?php echo ($currentPage == 'maternity.php') ? 'active' : ''; ?>">Maternity</a></li>
+                                    <li><a href="" class="diabetes-btn <?php echo ($currentPage == 'diabetes.php') ? 'active' : ''; ?>">Diabetes</a></li>
+                                    <li><a href="" class="ortho-btn">Orthopedics</a></li>
                                 </ul>
                             </li>
                             

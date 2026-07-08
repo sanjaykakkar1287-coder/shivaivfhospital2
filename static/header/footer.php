@@ -147,8 +147,10 @@
 <script src="./static/js/home.js"></script>
 <script src="./static/js/ajaxpages.js"></script>
 <script src="./static/js/header.js"></script>
-<script src="./static/js/ourteam.js"></script>
+
 <script src="./static/js/advanced.js"></script>
+<script src="./static/js/gyne.js"></script>
+<script src="./static/js/womens_health_assessment.js"></script>
 
 </html>
 

@@ -1,0 +1,286 @@
+:root {
+    --primary: #0f4a78;
+    --primary-dark: #08243a;
+    --secondary: #9AAF9E;
+    --text-dark: #2c3e50;
+    --text-muted: #64748b;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.diag-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 180px 20px 100px;
+}
+
+.diag-hero .container {
+    width: 50vw;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.diag-hero-content {
+    width: 50vw;
+    text-align: center;
+}
+
+.diag-hero h1 {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.diag-hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-tag{
+    display:inline-block;
+    margin-bottom:15px;
+}
+/* Diagnostics Services Section */
+.diag-services {
+    padding: 100px 0;
+    background: var(--bg-light);
+}
+
+.diag-services .section-heading h2 {
+    font-size: 46px;
+    color: var(--primary-dark);
+    margin: 0;
+    font-weight: 800;
+}
+
+.diag-services .section-heading p {
+    color: var(--text-muted);
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Slider Container */
+.diag-slider-container {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.diag-grid {
+    display: flex;
+    width: max-content;
+    gap: 30px;
+    animation: slideDiagCards 30s linear infinite;
+}
+
+.diag-grid:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slideDiagCards {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 15px)); } /* 15px is half of the gap */
+}
+
+/* Flip Card Styles */
+.diag-card {
+    width: 380px;
+    height: 320px;
+    perspective: 1200px;
+    flex-shrink: 0;
+}
+
+.diag-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+}
+
+.diag-card.flip .diag-card-inner {
+    transform: rotateY(180deg);
+}
+
+.diag-card-face {
+    position: absolute;
+    inset: 0;
+    background: var(--white);
+    border: 1px solid rgba(15, 74, 120, 0.08);
+    border-radius: 24px;
+    padding: 40px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 40px rgba(15, 74, 120, 0.05);
+    transition: var(--transition-smooth);
+}
+
+.diag-card-face.back {
+    transform: rotateY(180deg);
+}
+
+.diag-card:hover .diag-card-face {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(15, 74, 120, 0.1);
+    border-color: var(--secondary);
+}
+
+.diag-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--white);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+    transition: var(--transition-smooth);
+}
+
+.diag-card:hover .diag-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.diag-card-face h3 {
+    font-size: 24px;
+    color: var(--primary-dark);
+    margin: 0 0 15px 0;
+    font-weight: 700;
+}
+
+.diag-card-face p {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Technology Section */
+.diag-tech {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.tech-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.tech-content h2 {
+    font-size: 46px;
+    color: var(--primary-dark);
+    margin: 20px 0;
+    font-weight: 800;
+}
+
+.tech-content p {
+    color: var(--text-muted);
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.tech-features {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tech-features li {
+    color: var(--text-dark);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tech-features i {
+    color: var(--secondary);
+    font-size: 20px;
+}
+
+.tech-image img {
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(15, 74, 120, 0.1);
+}
+
+/* CTA Section */
+.diag-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    text-align: center;
+    color: var(--white);
+}
+
+.diag-cta h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.diag-cta p {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.btn-diag-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    background: var(--secondary);
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition-smooth);
+}
+
+.btn-diag-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-diag-cta i {
+    transition: transform 0.3s ease;
+}
+
+.btn-diag-cta:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .diag-card { width: 340px; }
+    .tech-wrapper { grid-template-columns: 1fr; gap: 50px; }
+}
+
+@media (max-width: 768px) {
+    .diag-hero { padding: 140px 0 60px; }
+    .diag-hero h1 { font-size: 38px; }
+    .diag-services, .diag-tech { padding: 60px 0; }
+    .diag-card { width: 300px; height: 340px; }
+    .diag-grid { gap: 20px; }
+    @keyframes slideDiagCards {
+        100% { transform: translateX(calc(-50% - 10px)); }
+    }
+}
