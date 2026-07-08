@@ -1,0 +1,355 @@
+/* ===========================
+   Diagnostics Page
+=========================== */
+
+.diag-hero{
+    padding:120px 20px;
+    background:linear-gradient(135deg,#0F2A43,#1D4ED8);
+    color:#fff;
+    text-align:center;
+}
+
+.section-tag{
+    display:inline-block;
+    padding:8px 18px;
+    background:#ffffff20;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:30px;
+    font-size:14px;
+    letter-spacing:1px;
+    margin-bottom:20px;
+    backdrop-filter:blur(10px);
+}
+
+.diag-hero h1{
+
+    font-size:58px;
+    font-weight:800;
+    line-height:1.2;
+    margin-bottom:25px;
+
+}
+
+.gradient-text{
+
+    background:linear-gradient(90deg,#60A5FA,#ffffff,#60A5FA);
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:gradientMove 6s linear infinite;
+
+}
+
+@keyframes gradientMove{
+
+    100%{
+
+        background-position:300%;
+
+    }
+
+}
+
+.diag-hero p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    color:#d9e8ff;
+
+    line-height:1.9;
+
+}
+
+/* Sections */
+
+.diag-services,
+
+.diag-tech{
+
+    padding:100px 20px;
+
+}
+
+.section-heading h2,
+
+.tech-content h2{
+
+    font-size:46px;
+
+    margin-bottom:15px;
+
+    color:#0F2A43;
+
+}
+
+.section-heading p{
+
+    color:#6B7280;
+
+}
+
+/* Grid */
+
+.diag-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+/* Cards */
+
+.diag-card{
+
+    background:#fff;
+
+    padding:40px 30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.diag-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(90deg,#1D4ED8,#60A5FA);
+
+}
+
+.diag-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(29,78,216,.20);
+
+}
+
+.diag-icon{
+
+    width:85px;
+
+    height:85px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#1D4ED8,#60A5FA);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    color:#fff;
+
+    margin-bottom:25px;
+
+    transition:.4s;
+
+}
+
+.diag-card:hover .diag-icon{
+
+    transform:rotateY(180deg) scale(1.08);
+
+}
+
+.diag-card h3{
+
+    color:#0F2A43;
+
+    margin-bottom:15px;
+
+}
+
+.diag-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/* Technology */
+
+.tech-wrapper{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.tech-image img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.tech-features{
+
+    list-style:none;
+
+    padding:0;
+
+    margin-top:30px;
+
+}
+
+.tech-features li{
+
+    margin-bottom:18px;
+
+    font-size:17px;
+
+    color:#555;
+
+}
+
+.tech-features i{
+
+    color:#1D4ED8;
+
+    margin-right:10px;
+
+}
+
+/* CTA */
+
+.diag-cta{
+
+    background:linear-gradient(135deg,#1D4ED8,#0F2A43);
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:90px 20px;
+
+}
+
+.diag-cta h2{
+
+    font-size:46px;
+
+    margin-bottom:15px;
+
+}
+
+.diag-cta p{
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+    color:#d9e8ff;
+
+}
+
+.btn-diag-cta{
+
+    display:inline-block;
+
+    padding:18px 38px;
+
+    background:#fff;
+
+    color:#1D4ED8;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.btn-diag-cta:hover{
+
+    background:#60A5FA;
+
+    color:#fff;
+
+    transform:translateY(-4px);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.diag-hero{
+
+    padding:80px 20px;
+
+}
+
+.diag-hero h1{
+
+    font-size:36px;
+
+}
+
+.section-heading h2,
+
+.tech-content h2,
+
+.diag-cta h2{
+
+    font-size:32px;
+
+}
+
+.tech-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+}
