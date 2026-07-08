@@ -14,11 +14,11 @@
     <link rel="stylesheet" href="./static/css/staticcss/testimonial.css">
     <link rel="stylesheet" href="./static/css/staticcss/ourteam.css">
         <link rel="stylesheet" href="./static/css/staticcss/gyne.css">
-        <!-- <link rel="stylesheet" href="./static/css/staticcss/maternity.css"> -->
+    <!-- <link rel="stylesheet" href="./static/css/staticcss/maternity.css"> -->
         <link rel="stylesheet" href="./static/css/staticcss/womens_health_assessment.css">
-   <!-- <link rel="stylesheet" href="./static/css/staticcss/diabetes.css"> -->
+    <!-- <link rel="stylesheet" href="./static/css/staticcss/diabetes.css"> -->
     <!-- <link rel="stylesheet" href="./static/css/staticcss/diagnostics.css"> -->
-    <!-- <link rel="stylesheet" href="./static/css/staticcss/ortho.css"> -->
+     <link rel="stylesheet" href="./static/css/staticcss/ortho.css"> 
     <link rel="icon" type="image/x-icon" href="./static/images/header/logo.jpeg">
 </head>
 <body>

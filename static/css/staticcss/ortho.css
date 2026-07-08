@@ -1,515 +1,373 @@
-/* --- Core Variables --- */
-:root {
-    --primary-blue: #1e3a8a;
-    --primary-gradient: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-    --accent-sage: #10b981; 
-    --accent-gradient: linear-gradient(135deg, #059669 0%, #10b981 100%);
-    --text-dark: #0f172a;
-    --text-gray: #475569;
-    --white: #ffffff;
-    --shadow-premium: 0 20px 40px -15px rgba(30, 58, 138, 0.08);
-    --transition-premium: cubic-bezier(0.16, 1, 0.3, 1);
-}
+/* ==========================================================================
+   EXCLUSIVE ORTHOPEDICS INTERFACE STYLESHEET (V3 Design Line)
+   ========================================================================== */
 
-/* --- Hero Layout --- */
-.ortho-hero {
-    padding: clamp(120px, 18vw, 220px) 0;
-    background: linear-gradient(-45deg, #fdfefe, #f0fdf4, #f5f7ff, #fcfdff);
-    background-size: 400% 400%;
-    animation: heroBgMove 18s ease infinite;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-@keyframes heroBgMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.bg-glow {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(120px);
-    z-index: 1;
-    opacity: 0.5;
-    pointer-events: none;
-}
-.glow-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: rgba(240, 253, 244, 0.8); }
-.glow-2 { bottom: -10%; right: -10%; width: 600px; height: 600px; background: rgba(238, 242, 255, 0.8); }
-
-.ortho-hero .container {
-    max-width: 1150px;
-    margin: auto;
+/* Layout wrapper core */
+.ortho-grid-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 24px;
-    position: relative;
-    z-index: 2;
+    box-sizing: border-box;
 }
 
-.section-tag {
+.ortho-badge-modern {
     display: inline-block;
-    font-size: 14px;
+    background: #eef5f8;
+    color: #326295;
+    padding: 6px 18px;
+    font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--accent-sage);
+    letter-spacing: 1px;
+    border-radius: 4px;
     margin-bottom: 20px;
-    background: rgba(16, 185, 129, 0.1);
-    padding: 6px 18px;
-    border-radius: 30px;
 }
 
-.ortho-hero h1 {
-    font-size: 62px;
-    line-height: 1.2;
-    color: var(--text-dark);
-    margin-bottom: 28px;
-    font-weight: 800;
-    letter-spacing: -1px;
-}
-
-.gradient-text {
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.hero-description {
-    max-width: 800px;
-    margin: 0 auto 48px;
-    font-size: 21px;
-    line-height: 1.75;
-    color: var(--text-gray);
-}
-
-.hero-highlights {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 55px;
-}
-
-.highlight-item {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    padding: 12px 26px 12px 14px;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    box-shadow: var(--shadow-premium);
-    transition: transform 0.4s var(--transition-premium), box-shadow 0.4s var(--transition-premium), border 0.4s var(--transition-premium);
+/* SECTION 1: HERO CONTAINER */
+.ortho-modern-hero {
     position: relative;
+    background: #ffffff;
+    padding: 90px 0;
+    overflow: hidden;
+    border-bottom: 1px solid #eef2f5;
 }
 
-.highlight-item:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 25px 50px -12px rgba(30, 58, 138, 0.15);
-    border: 1px solid rgba(16, 185, 129, 0.3);
+.ortho-hero-radial {
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(240,246,250,1) 0%, rgba(255,255,255,0) 70%);
+    z-index: 1;
 }
 
-.icon-wrapper {
-    width: 42px;
-    height: 42px;
-    background: var(--white);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-}
-
-.highlight-item i { color: var(--accent-sage); font-size: 16px; }
-.highlight-item span { color: var(--text-dark); font-weight: 600; font-size: 15px; }
-
-.animate-fade-in { opacity: 0; transform: translateY(30px); animation: fadeInUp 1.2s var(--transition-premium) forwards; }
-.delay-1 { animation-delay: 0.15s; }
-.delay-2 { animation-delay: 0.3s; }
-.delay-3 { animation-delay: 0.45s; }
-
-@keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-
-@media (max-width: 992px) {
-    .ortho-hero h1 { font-size: 48px; }
-}
-
-@media (max-width: 768px) {
-    .ortho-hero { padding: 140px 0 80px; }
-    .ortho-conditions-section { padding: 70px 0; }
-    .ortho-hero h1 { font-size: 36px; line-height: 1.3; }
-    .hero-description { font-size: 16px; margin-bottom: 35px; }
-    .hero-highlights { gap: 12px; }
-    .highlight-item { padding: 10px 20px 10px 10px; }
-}
-
-/* ==========================
-   Conditions Timeline Section
-========================== */
-.ortho-conditions-section {
-    padding: clamp(60px, 8vw, 100px) 0;
-    background: #f8fafc;
-}
-
-.conditions-wrapper {
+.ortho-modern-hero .ortho-grid-container {
+    position: relative;
+    z-index: 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
-}
-
-.conditions-left {
-    position: relative;
-    height: 100%;
-}
-
-.sticky-panel {
-    position: sticky;
-    top: 120px;
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 24px;
-    border: 1px solid rgba(15, 74, 120, 0.08);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-    position: relative;
-}
-
-.sticky-panel .section-tag {
-    display: inline-flex;
+    gap: 40px;
     align-items: center;
-    padding: 8px 18px;
-    background: rgba(154, 175, 158, 0.15);
-    border-radius: 50px;
-    color: #0f4a78;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 25px;
 }
 
-.doctor-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 16px;
-    margin-bottom: 25px;
-    box-shadow: 0 10px 20px rgba(15, 74, 120, 0.1);
-}
-
-.info-box {
-    min-height: 200px;
-    position: relative;
-}
-
-.info-box h3 {
-    font-size: 28px;
-    color: #0f4a78;
-    margin: 0 0 15px 0;
-    font-weight: 700;
-}
-
-.info-box p {
-    color: #64748b;
-    font-size: 16px;
-    line-height: 1.7;
+.ortho-heading-v3 {
+    font-size: 3rem;
+    color: #1a4d6c;
+    font-weight: 800;
+    line-height: 1.2;
     margin: 0 0 20px 0;
 }
 
-.info-box ul {
+.ortho-text-accent {
+    color: #326295;
+}
+
+.ortho-hero-text {
+    font-size: 1.05rem;
+    color: #60737d;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Vertical / right aligned grid pills */
+.ortho-hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.ortho-stat-pill {
+    background: #fafbfc;
+    border: 1px solid #eef2f6;
+    padding: 24px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.ortho-stat-pill:hover {
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(26, 77, 108, 0.06);
+    border-color: #326295;
+}
+
+.ortho-stat-icon {
+    font-size: 1.4rem;
+    color: #4f8267;
+}
+
+.ortho-stat-label {
+    font-weight: 600;
+    color: #1a4d6c;
+    font-size: 0.95rem;
+}
+
+/* SECTION 2: HORIZONTAL TABS DISPLAY */
+.ortho-tabs-section {
+    padding: 80px 0;
+    background: #fafbfc;
+}
+
+.ortho-tabs-nav {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #eef2f6;
+    margin-bottom: 40px;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+.ortho-tab-btn {
+    background: none;
+    border: none;
+    padding: 16px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #60737d;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.ortho-tab-btn.active, .ortho-tab-btn:hover {
+    color: #326295;
+}
+
+.ortho-tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #326295;
+}
+
+.ortho-display-box {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.02);
+    border: 1px solid #edf2f6;
+    overflow: hidden;
+}
+
+.ortho-display-split {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+}
+
+.ortho-display-info {
+    padding: 50px;
+}
+
+.ortho-index-counter {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #4f8267;
+}
+
+.ortho-display-info h2 {
+    font-size: 2rem;
+    color: #1a4d6c;
+    margin: 10px 0 20px 0;
+}
+
+.ortho-display-info p {
+    color: #60737d;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.ortho-checklist {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-.info-box li {
-    margin-bottom: 12px;
-    font-weight: 500;
-    color: #2c3e50;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 12px;
 }
 
-.info-box li i {
-    color: #9AAF9E;
-    font-size: 15px;
-}
-
-.conditions-right {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
-}
-
-.conditions-right::before {
-    content: '';
-    position: absolute;
-    left: 35px;
-    top: 20px;
-    bottom: 20px;
-    width: 2px;
-    background: #e2e8f0;
-    z-index: 0;
-}
-
-.timeline-item {
-    display: flex;
-    gap: 25px;
-    padding: 25px;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-    position: relative;
-    z-index: 1;
-}
-
-.timeline-item:hover, .timeline-item.active {
-    background: #fdfefe;
-    border-color: #0f4a78;
-    transform: translateX(10px);
-    box-shadow: 0 15px 30px rgba(15, 74, 120, 0.08);
-}
-
-.timeline-item .number {
-    width: 70px;
-    height: 70px;
-    background: #ffffff;
-    border: 2px solid #e2e8f0;
-    border-radius: 50%;
+.ortho-checklist li {
+    font-size: 0.95rem;
+    color: #1a4d6c;
+    font-weight: 500;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    font-weight: 700;
-    color: #0f4a78;
-    flex-shrink: 0;
-    transition: all 0.3s ease;
-    z-index: 2;
+    gap: 8px;
 }
 
-.timeline-item:hover .number, .timeline-item.active .number {
-    background: #0f4a78;
-    color: #ffffff;
-    border-color: #0f4a78;
-    box-shadow: 0 5px 15px rgba(15, 74, 120, 0.3);
+.ortho-checklist li i {
+    color: #4f8267;
 }
 
-.timeline-item .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.timeline-item .content h3 {
-    font-size: 22px;
-    color: #0f4a78;
-    margin: 0 0 8px 0;
-    font-weight: 700;
-}
-
-.timeline-item .content p {
-    color: #64748b;
-    line-height: 1.6;
-    margin: 0;
-    font-size: 15px;
-}
-
-@media (max-width: 992px) {
-    .conditions-wrapper { grid-template-columns: 1fr; gap: 40px; }
-    .sticky-panel { position: relative; top: 0; }
-}
-
-@media (max-width: 576px) {
-    .conditions-right::before { left: 25px; }
-    .timeline-item { gap: 15px; padding: 20px; }
-    .timeline-item .number { width: 50px; height: 50px; font-size: 18px; }
-    .timeline-item .content h3 { font-size: 18px; }
-}
-
-/* ==========================
-   Orthopedics Services Grid
-========================== */
-.ortho-services-section {
-    padding: 100px 20px;
-    background-color: #ffffff;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 35px;
-}
-
-.service-card {
-    background: #f8fafc;
-    padding: 40px;
-    border-radius: 24px;
-    border: 1px solid rgba(15, 74, 120, 0.05);
-    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-    text-align: center;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(15, 74, 120, 0.08);
-    background: #ffffff;
-    border-color: #9AAF9E;
-}
-
-.service-icon {
-    width: 75px;
-    height: 75px;
-    background: linear-gradient(135deg, #0f4a78, #9AAF9E);
-    color: #ffffff;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    margin: 0 auto 25px auto;
-    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.service-card:hover .service-icon {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 10px 20px rgba(154, 175, 158, 0.4);
-}
-
-.service-card h3 {
-    font-size: 22px;
-    color: #0f4a78;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.service-card p {
-    color: #64748b;
-    line-height: 1.7;
-    font-size: 15px;
-    margin: 0;
-}
-
-/* ==========================
-   Doctor Profile Grid (3 in a row)
-========================== */
-.ortho-doctor-section {
-    padding: 80px 20px;
-    background: #f8fafc;
-}
-
-.ortho-doctors-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-}
-
-.ortho-doctor-card {
-    background: #ffffff;
-    border-radius: 28px;
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(15, 74, 120, 0.05);
-    border: 1px solid rgba(15, 74, 120, 0.05);
-    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    position: relative;
-}
-
-.ortho-doctor-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(15, 74, 120, 0.1);
-}
-
-.ortho-doc-image {
-    position: relative;
-    width: 100%;
-    height: 520px;
-    overflow: hidden;
-}
-
-.ortho-doc-image img {
+.ortho-display-media {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    transition: transform 0.6s ease;
 }
 
-.ortho-doctor-card:hover .ortho-doc-image img {
-    transform: scale(1.08);
+.ortho-display-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.ortho-doc-badge {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background: #0f4a78;
-    color: #ffffff;
-    padding: 8px 16px;
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: 700;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+/* SECTION 3: STAGGERED LINE MATRIX */
+.ortho-services-staggered {
+    padding: 90px 0;
+    background: #ffffff;
 }
 
-.ortho-doc-info {
-    padding: 30px;
+.ortho-section-title {
     text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px;
 }
 
-.ortho-doc-info h3 {
-    font-size: 22px;
-    color: #0f4a78;
-    margin: 0 0 5px 0;
-    font-weight: 800;
+.ortho-section-title h2 {
+    font-size: 2.25rem;
+    color: #1a4d6c;
+    margin: 0 0 14px 0;
 }
 
-.ortho-doc-role {
-    display: block;
-    font-size: 14px;
-    color: #9AAF9E;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+.ortho-section-title p {
+    color: #60737d;
+    margin: 0;
 }
 
-.ortho-doc-info p {
-    color: #64748b;
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 25px;
+.ortho-staggered-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
 }
 
-.btn-ortho-doc {
-    display: inline-block;
-    background: #f8fafc;
-    color: #0f4a78;
-    border: 1px solid #e2e8f0;
-    padding: 12px 24px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 14px;
-    text-decoration: none;
+.ortho-service-row {
+    display: flex;
+    gap: 24px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    border-left: 3px solid #eef2f6;
     transition: all 0.3s ease;
 }
 
-.btn-ortho-doc:hover {
-    background: #0f4a78;
+.ortho-service-row:hover {
+    border-left-color: #4f8267;
+    background: #fafbfc;
+}
+
+.ortho-row-icon {
+    font-size: 1.5rem;
+    color: #326295;
+    margin-top: 4px;
+}
+
+.ortho-row-body h3 {
+    font-size: 1.25rem;
+    color: #1a4d6c;
+    margin: 0 0 8px 0;
+}
+
+.ortho-row-body p {
+    color: #60737d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* SECTION 4: SURGEONS GRID CLUSTER */
+.ortho-surgeons-cluster {
+    padding: 90px 0;
+    background: #fafbfc;
+}
+
+.ortho-cluster-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.ortho-member-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #edf2f6;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+}
+
+.ortho-avatar-box {
+    position: relative;
+    width: 100%;
+    height: 320px;
+}
+
+.ortho-avatar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ortho-exp-tag {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    background: #1a4d6c;
     color: #ffffff;
-    border-color: #0f4a78;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 3px;
 }
 
-@media (max-width: 1024px) {
-    .ortho-doctors-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+.ortho-member-info {
+    padding: 24px;
 }
 
-@media (max-width: 768px) {
-    .ortho-doctors-grid { grid-template-columns: 1fr; }
-    .ortho-doc-image { height: 280px; }
+.ortho-member-info h3 {
+    font-size: 1.3rem;
+    color: #1a4d6c;
+    margin: 0 0 4px 0;
+}
+
+.ortho-role-tag {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4f8267;
+    margin-bottom: 14px;
+}
+
+.ortho-member-info p {
+    font-size: 0.9rem;
+    color: #60737d;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+}
+
+.ortho-action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #326295;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.ortho-action-link:hover {
+    color: #1a4d6c;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 992px) {
+    .ortho-modern-hero .ortho-grid-container, .ortho-display-split, .ortho-staggered-list, .ortho-cluster-grid {
+        grid-template-columns: 1fr;
+    }
+    .ortho-heading-v3 { font-size: 2.2rem; }
+    .ortho-display-media { height: 260px; }
+    .ortho-display-info { padding: 30px; }
 }

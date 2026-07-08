@@ -151,6 +151,7 @@
 <script src="./static/js/advanced.js"></script>
 <script src="./static/js/gyne.js"></script>
 <script src="./static/js/womens_health_assessment.js"></script>
+<script src="./static/js/ortho.js"></script>
 
 </html>
 
