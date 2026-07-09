@@ -27,9 +27,10 @@
 
             <div class="hero-buttons">
 
-                <a href="#" class="btn-primary">
-                    Book Appointment
-                </a>
+                    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop " style="font-size:14px;">
+  Request a Call Back <i class="fa-solid fa-arrow-right"></i>
+</button>
 
                 <a href="#" class="btn-outline">
                     Explore Departments

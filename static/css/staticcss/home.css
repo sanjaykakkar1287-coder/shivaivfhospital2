@@ -15,6 +15,7 @@
     background-size:400% 400%;
     animation:heroGradient 12s ease infinite;
     padding-top:130px; /* Prevents content from hiding behind the fixed header */
+    padding-bottom:80px; /* Adds breathing room at the bottom of the hero section */
 }
 
 @keyframes heroGradient{

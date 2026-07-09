@@ -1,0 +1,146 @@
+/* ==========================================================================
+   SHIVA HOSPITAL ARCHITECTURAL STYLESHEET
+   ========================================================================== */
+
+/* Universal Layout Foundations */
+.sh-spec-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.sh-spec-badge {
+    display: inline-block;
+    color: #4f8267;
+    background-color: rgba(79, 130, 103, 0.08);
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.sh-text-blue { color: #326295; }
+.sh-text-green-light { color: #81c798; }
+
+.sh-spec-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+.sh-spec-header h2 { font-size: 2.5rem; color: #1a4d6c; font-weight: 800; margin: 0 0 14px 0; letter-spacing: -0.5px; }
+.sh-spec-header p { color: #60737d; font-size: 1.05rem; line-height: 1.6; margin: 0; }
+
+/* ==========================================================================
+   SECTION 1: GYNECOLOGY STICKY TRACK
+   ========================================================================== */
+.sh-spec-gyne { padding: 100px 0; background-color: #ffffff; }
+
+.sh-sticky-matrix-layout {
+    display: grid;
+    grid-template-columns: 460px 1fr;
+    gap: 60px;
+    align-items: start;
+}
+.sh-matrix-sticky-column { position: sticky; top: 40px; }
+.sh-matrix-preview { background: #f8fafc; border-radius: 16px; padding: 32px; border: 1px solid #edf2f7; }
+.sh-matrix-media { width: 100%; height: 230px; border-radius: 12px; overflow: hidden; margin-bottom: 24px; }
+.sh-matrix-media img { width: 100%; height: 100%; object-fit: cover; }
+
+.sh-matrix-live-details h3 { font-size: 1.4rem; color: #1a4d6c; margin: 0 0 10px 0; font-weight: 700; }
+.sh-matrix-live-details p { color: #60737d; font-size: 0.95rem; line-height: 1.5; margin: 0 0 20px 0; }
+.sh-matrix-bullets { list-style: none; padding: 0; margin: 0; }
+.sh-matrix-bullets li { position: relative; padding-left: 22px; font-size: 0.9rem; color: #1a4d6c; font-weight: 600; margin-bottom: 8px; }
+.sh-matrix-bullets li::before { content: "✓"; position: absolute; left: 0; color: #4f8267; font-weight: 900; }
+
+.sh-matrix-row { padding: 24px; border-radius: 12px; cursor: pointer; transition: all 0.25s ease; border-left: 4px solid transparent; }
+.sh-matrix-row:hover, .sh-matrix-row.active { background: #f4f8fa; border-left-color: #326295; }
+.sh-matrix-row h4 { margin: 0 0 6px 0; font-size: 1.15rem; color: #1a4d6c; font-weight: 700; }
+.sh-matrix-row p { margin: 0; color: #60737d; font-size: 0.95rem; line-height: 1.5; }
+
+/* ==========================================================================
+   SECTION 2: ASYMMETRIC MATERNITY LAYOUT
+   ========================================================================== */
+.sh-spec-maternity { padding: 100px 0; background: linear-gradient(180deg, #ffffff 0%, #f5f9fc 100%); }
+.sh-asymmetric-flex-row { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
+
+.sh-spec-lead-text { font-size: 1.15rem; color: #60737d; line-height: 1.6; margin: 0 0 40px 0; }
+.sh-maternity-features-list { display: flex; flex-direction: column; gap: 24px; margin-bottom: 40px; }
+.sh-maternity-item { display: flex; gap: 20px; align-items: flex-start; }
+.sh-maternity-icon { width: 44px; height: 44px; background: #ffffff; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #326295; font-size: 1.15rem; box-shadow: 0 8px 20px rgba(26,77,108,0.04); flex-shrink: 0; }
+.sh-maternity-item h4 { margin: 0 0 4px 0; font-size: 1.1rem; color: #1a4d6c; font-weight: 700; }
+.sh-maternity-item p { margin: 0; color: #60737d; font-size: 0.95rem; line-height: 1.5; }
+
+.sh-spec-btn-action { display: inline-flex; align-items: center; gap: 10px; background: #1a4d6c; color: #ffffff; padding: 16px 32px; border-radius: 4px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; box-shadow: 0 10px 25px rgba(26,77,108,0.12); font-size: 0.95rem; }
+.sh-spec-btn-action:hover { background: #326295; transform: translateY(-2px); }
+
+.sh-maternity-image-wrapper { width: 100%; height: 460px; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 45px rgba(26,77,108,0.06); }
+.sh-maternity-image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ==========================================================================
+   SECTION 3: ORTHOPEDICS CANVAS TABS
+   ========================================================================== */
+.sh-spec-ortho { padding: 100px 0; background-color: #ffffff; }
+.sh-ortho-tabs-bar { display: flex; justify-content: space-between; border-bottom: 2px solid #eef2f6; margin-bottom: 40px; overflow-x: auto; gap: 12px; }
+.sh-ortho-tab-btn { background: none; border: none; padding: 16px 24px; font-size: 1rem; font-weight: 700; color: #60737d; cursor: pointer; position: relative; white-space: nowrap; transition: all 0.2s ease; }
+.sh-ortho-tab-btn.active, .sh-ortho-tab-btn:hover { color: #326295; }
+.sh-ortho-tab-btn.active::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px; background: #326295; }
+
+.sh-ortho-display-canvas { background: #ffffff; border-radius: 16px; border: 1px solid #edf2f6; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.02); }
+.sh-canvas-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; }
+.sh-canvas-details { padding: 50px; }
+.sh-canvas-index { font-size: 0.85rem; font-weight: 700; color: #4f8267; text-transform: uppercase; }
+.sh-canvas-details h3 { font-size: 1.85rem; color: #1a4d6c; margin: 10px 0 16px 0; font-weight: 800; }
+.sh-canvas-details p { color: #60737d; line-height: 1.6; font-size: 1rem; margin-bottom: 30px; }
+.sh-canvas-checklist { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr; gap: 12px; }
+.sh-canvas-checklist li { position: relative; padding-left: 26px; color: #1a4d6c; font-weight: 600; font-size: 0.95rem; }
+.sh-canvas-checklist li::before { content: "✓"; position: absolute; left: 0; color: #4f8267; font-weight: 900; }
+.sh-canvas-media { width: 100%; height: 100%; min-height: 320px; }
+.sh-canvas-media img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ==========================================================================
+   SECTION 4: DIABETOLOGY METABOLIC GRID
+   ========================================================================== */
+.sh-spec-diabetes { padding: 100px 0; background: linear-gradient(180deg, #ffffff 0%, #f6fafc 100%); }
+.sh-diabetes-masonry-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+.sh-db-masonry-card { background: #ffffff; padding: 40px 30px; border-radius: 12px; border: 1px solid #eef2f5; box-shadow: 0 10px 30px rgba(26,77,108,0.02); transition: all 0.3s ease; }
+.sh-db-masonry-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(26,77,108,0.06); border-color: rgba(50,98,149,0.2); }
+.sh-db-card-icon { width: 46px; height: 46px; background: #f0f5f9; color: #326295; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-bottom: 24px; }
+.sh-db-masonry-card h3 { font-size: 1.25rem; color: #1a4d6c; margin: 0 0 10px 0; font-weight: 700; }
+.sh-db-masonry-card p { color: #60737d; font-size: 0.95rem; line-height: 1.6; margin: 0; }
+
+/* ==========================================================================
+   SECTION 5: EMERGENCY CARE MATRIIX
+   ========================================================================== */
+.sh-spec-emergency { padding: 100px 0; background-color: #ffffff; }
+.sh-emergency-card-wrapper { background: linear-gradient(135deg, #1a4d6c 0%, #0d2b3e 100%); border-radius: 20px; padding: 60px; color: #ffffff; box-shadow: 0 20px 50px rgba(13,43,62,0.25); position: relative; overflow: hidden; }
+.sh-emergency-card-wrapper::after { content: ''; position: absolute; right: -10%; top: -20%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(79,130,103,0.15) 0%, rgba(0,0,0,0) 70%); border-radius: 50%; }
+
+.sh-emergency-content-split { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; position: relative; z-index: 2; }
+.sh-er-title { font-size: 2.5rem; font-weight: 800; margin: 0 0 16px 0; line-height: 1.2; }
+.sh-er-desc { color: #b0c4cf; font-size: 1.1rem; line-height: 1.6; margin: 0 0 30px 0; }
+.sh-er-alert-indicators { display: flex; flex-direction: column; gap: 12px; }
+.sh-er-pill { display: flex; align-items: center; gap: 10px; font-size: 0.95rem; font-weight: 600; color: #e2ecf0; }
+.sh-er-pill i { color: #81c798; }
+
+.sh-er-action-panel { background: rgba(255, 255, 255, 0.05); padding: 40px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); text-align: center; }
+.sh-phone-label { display: block; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #81c798; margin-bottom: 8px; }
+.sh-phone-number { display: inline-flex; align-items: center; gap: 10px; font-size: 1.85rem; color: #ffffff; font-weight: 800; text-decoration: none; margin-bottom: 12px; transition: color 0.2s ease; }
+.sh-phone-number:hover { color: #81c798; }
+.sh-phone-subtext { margin: 0; font-size: 0.85rem; color: #b0c4cf; line-height: 1.4; }
+
+/* ==========================================================================
+   BREAKPOINTS VIEWPORT COMPATIBILITY
+   ========================================================================== */
+@media (max-width: 992px) {
+    .sh-spec-header h2 { font-size: 2rem; }
+    .sh-sticky-matrix-layout, .sh-asymmetric-flex-row, .sh-canvas-grid, .sh-emergency-content-split { grid-template-columns: 1fr; gap: 40px; }
+    .sh-matrix-sticky-column { position: relative; top: 0; }
+    .sh-maternity-image-wrapper { height: 350px; }
+    .sh-canvas-media { min-height: 250px; }
+    .sh-emergency-card-wrapper { padding: 40px; }
+}

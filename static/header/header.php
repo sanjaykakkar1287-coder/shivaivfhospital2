@@ -51,12 +51,12 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                                 </ul>
                             </li>
                             
-                            <li class="drop-item"><a href="emergency.php">Emergency Services</a></li>
+                            <li class="drop-item"><a href="" class="emergency-btn">Emergency Services</a></li>
                         </ul>
                     </li>
 
-                    <li class="menu-item"><a href="our_specialities.php" class="menu-link <?php echo ($currentPage == 'our_specialities.php') ? 'active' : ''; ?>">Our Specialists</a></li>
-                    <li class="menu-item"><a href="contact.php" class="menu-link <?php echo ($currentPage == 'contact.php') ? 'active' : ''; ?>">Contact</a></li>
+                    <li class="menu-item"><a href="" class="specialities-btn  menu-link  <?php echo ($currentPage == 'our_specialities.php') ? 'active' : ''; ?>">Our Specialists</a></li>
+                    <li class="menu-item"><a href="" class="contact-btn  menu-link  <?php echo ($currentPage == 'contact.php') ? 'active' : ''; ?>">Contact</a></li>
                 </ul>
             </nav>
 

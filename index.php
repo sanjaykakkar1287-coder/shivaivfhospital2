@@ -13,15 +13,18 @@
     <link rel="stylesheet" href="./static/css/staticcss/about.css">
     <link rel="stylesheet" href="./static/css/staticcss/testimonial.css">
     <link rel="stylesheet" href="./static/css/staticcss/ourteam.css">
-        <link rel="stylesheet" href="./static/css/staticcss/gyne.css">
+    <link rel="stylesheet" href="./static/css/staticcss/gyne.css">
     <!-- <link rel="stylesheet" href="./static/css/staticcss/maternity.css"> -->
-        <link rel="stylesheet" href="./static/css/staticcss/womens_health_assessment.css">
-    <!-- <link rel="stylesheet" href="./static/css/staticcss/diabetes.css"> -->
+    <link rel="stylesheet" href="./static/css/staticcss/womens_health_assessment.css">
+    <link rel="stylesheet" href="./static/css/staticcss/diabetes.css"> 
     <!-- <link rel="stylesheet" href="./static/css/staticcss/diagnostics.css"> -->
      <link rel="stylesheet" href="./static/css/staticcss/ortho.css"> 
-    <link rel="icon" type="image/x-icon" href="./static/images/header/logo.jpeg">
+     <link rel="stylesheet" href="./static/css/staticcss/our_specialities.css"> 
+     <link rel="stylesheet" href="./static/css/staticcss/contact.css">
+     <link rel="icon" type="image/x-icon" href="./static/images/header/logo.jpeg">
 </head>
 <body>
+    <?php include './pages/modal/gynemodel.php';?>
 <?php include './static/header/header.php';?>
 <div class="pagerender">
        <?php include './pages/home.php'; ?> 

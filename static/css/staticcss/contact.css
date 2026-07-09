@@ -1,0 +1,386 @@
+/* ==========================================================================
+   SHIVA HOSPITAL CONTACT UI SYSTEM STYLESHEET
+   ========================================================================== */
+
+.sh-contact-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+.sh-contact-badge {
+    display: inline-block;
+    color: #4f8267;
+    background-color: rgba(79, 130, 103, 0.08);
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+.sh-contact-highlight {
+    color: #326295;
+}
+
+/* SECTION 1: HERO CONTAINER */
+.sh-contact-hero {
+    position: relative;
+    background: linear-gradient(180deg, #ffffff 0%, #f4f8fa 100%);
+    padding: 80px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.sh-contact-main-heading {
+    font-size: 3rem;
+    color: #1a4d6c;
+    font-weight: 800;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.5px;
+}
+
+.sh-contact-lead-desc {
+    font-size: 1.1rem;
+    color: #60737d;
+    max-width: 760px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* SECTION 2: CONTENT ROW LAYOUT SPLIT */
+.sh-contact-body-layout {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.sh-contact-split-grid {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* Info stack designs */
+.sh-contact-info-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sh-info-mini-card {
+    background: #ffffff;
+    border: 1px solid #edf2f6;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    box-shadow: 0 10px 30px rgba(26, 77, 108, 0.02);
+}
+
+.sh-emergency-alert-card {
+    background: #fffcfc;
+    border-color: rgba(255, 0, 0, 0.05);
+}
+
+.sh-info-icon {
+    width: 44px;
+    height: 44px;
+    background: #f0f5f8;
+    color: #326295;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.sh-emergency-alert-card .sh-info-icon {
+    background: rgba(255, 0, 0, 0.05);
+    color: #d9534f;
+}
+
+.sh-info-text h4 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    color: #1a4d6c;
+    font-weight: 700;
+}
+
+.sh-phone-link {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #d9534f;
+    text-decoration: none;
+    margin-bottom: 4px;
+}
+
+.sh-detail-row {
+    margin: 0 0 6px 0;
+    font-size: 0.95rem;
+    color: #60737d;
+    line-height: 1.5;
+}
+
+.sh-detail-row strong {
+    color: #1a4d6c;
+}
+
+/* Contact Inquiry Form container */
+.sh-contact-form-holder {
+    background: #ffffff;
+    border: 1px solid #edf2f6;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(26, 77, 108, 0.03);
+}
+
+.sh-form-header h3 {
+    font-size: 1.5rem;
+    color: #1a4d6c;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+}
+
+.sh-form-header p {
+    color: #60737d;
+    margin: 0 0 30px 0;
+    font-size: 0.95rem;
+}
+
+.sh-modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sh-form-row-twin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.sh-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sh-form-group label {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #1a4d6c;
+}
+
+.sh-modern-form input,
+.sh-modern-form select,
+.sh-modern-form textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: #fafbfc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #1a4d6c;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.sh-modern-form input:focus,
+.sh-modern-form select:focus,
+.sh-modern-form textarea:focus {
+    outline: none;
+    background: #ffffff;
+    border-color: #326295;
+    box-shadow: 0 0 0 3px rgba(50, 98, 149, 0.1);
+}
+
+.sh-form-submit-btn {
+    align-self: flex-start;
+    background: #1a4d6c;
+    color: #ffffff;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+}
+
+.sh-form-submit-btn:hover {
+    background: #326295;
+    transform: translateY(-1px);
+}
+
+.sh-form-success-alert {
+    display: none;
+    background: rgba(79, 130, 103, 0.1);
+    color: #4f8267;
+    padding: 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid rgba(79, 130, 103, 0.2);
+}
+
+/* SECTION 3: FAQ ACCORDION DISPLAY */
+.sh-contact-faq-section {
+    padding: 80px 0;
+    background: #fafbfc;
+    border-top: 1px solid #edf2f6;
+}
+
+.sh-faq-section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+.sh-faq-section-header h2 {
+    font-size: 2.25rem;
+    color: #1a4d6c;
+    font-weight: 800;
+    margin: 0 0 14px 0;
+}
+
+.sh-faq-section-header p {
+    color: #60737d;
+    margin: 0;
+}
+
+.sh-faq-accordion-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sh-faq-item {
+    background: #ffffff;
+    border: 1px solid #edf2f6;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.sh-faq-trigger {
+    width: 100%;
+    padding: 22px 28px;
+    background: none;
+    border: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 20px;
+}
+
+.sh-faq-trigger span {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a4d6c;
+}
+
+.sh-faq-trigger i {
+    color: #326295;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+.sh-faq-panel {
+    display: none;
+    padding: 0 28px 22px 28px;
+}
+
+.sh-faq-panel p {
+    margin: 0;
+    color: #60737d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.sh-faq-item.open {
+    box-shadow: 0 10px 25px rgba(26, 77, 108, 0.03);
+    border-color: #e2e8f0;
+}
+
+/* SECTION 4: EMERGENCY ER BANNER ACTION */
+.sh-contact-er-banner {
+    padding: 60px 0 80px 0;
+    background-color: #ffffff;
+}
+
+.sh-er-banner-box {
+    background: linear-gradient(135deg, #1a4d6c 0%, #0d2b3e 100%);
+    border-radius: 16px;
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    color: #ffffff;
+}
+
+.sh-er-banner-content h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+}
+
+.sh-er-banner-content p {
+    margin: 0;
+    color: #b0c4cf;
+    max-width: 650px;
+    line-height: 1.5;
+    font-size: 0.98rem;
+}
+
+.sh-er-banner-call-btn {
+    background: #d9534f;
+    color: #ffffff;
+    padding: 16px 32px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 20px rgba(217, 83, 79, 0.2);
+    transition: all 0.2s ease;
+}
+
+.sh-er-banner-call-btn:hover {
+    background: #c9302c;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   VIEWPORT RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 992px) {
+    .sh-contact-main-heading { font-size: 2.25rem; }
+    .sh-contact-split-grid { grid-template-columns: 1fr; gap: 40px; }
+    .sh-er-banner-box { flex-direction: column; text-align: center; padding: 40px; }
+    .sh-form-submit-btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 576px) {
+    .sh-form-row-twin { grid-template-columns: 1fr; gap: 20px; }
+    .sh-contact-form-holder { padding: 24px; }
+    .sh-faq-trigger { padding: 18px 20px; }
+    .sh-faq-panel { padding: 0 20px 18px 20px; }
+}

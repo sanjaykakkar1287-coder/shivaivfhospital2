@@ -39,29 +39,34 @@
 
             <!-- Right Side: Contact Form -->
             <div class="contact-form-panel">
-                <form action="#" class="modern-contact-form" >
-                    <h3 class="form-title">Send Us a Message</h3>
-                    <div class="form-group">
-                        <label for="userName">Full Name</label>
-                        <input type="text" id="userName" name="name" placeholder="John Doe" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="userEmail">Email Address</label>
-                        <input type="email" id="userEmail" name="email" placeholder="john@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="userMobile">Mobile Number</label>
-                        <input type="tel" id="userMobile" name="mobile"  pattern="[0-9]{10}"
-    maxlength="10" placeholder="Enter your mobile number" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="userMsg">Your Message</label>
-                        <textarea id="userMsg" name="message" rows="4" placeholder="How can we help you today?" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit-form">
-                        Submit Request <i class="fa-solid fa-paper-plane"></i>
-                    </button>
-                </form>
+                <form action="#" class="modern-contact-form">
+    <h3 class="form-title">Send Us a Message</h3>
+
+    <div class="form-group mb-1">
+        <label class="form-label">Full Name *</label>
+        <input type="text" class="form-name" name="name" placeholder="John Doe" required>
+    </div>
+
+    <div class="form-group mb-1">
+        <label class="form-label">Email Address *</label>
+        <input type="email" class="form-email" name="email" placeholder="john@example.com" required>
+    </div>
+
+    <div class="form-group mb-1">
+        <label class="form-label">Mobile Number *</label>
+        <input type="tel" class="form-mobile" name="mobile" pattern="[0-9]{10}" maxlength="10" placeholder="Enter your mobile number" required>
+    </div>
+
+    <div class="form-group mb-1">
+        <label class="form-label">Your Message *</label>
+        <textarea class="form-message" name="message" rows="4" placeholder="How can we help you today?" required></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit-form">
+        Submit Request <i class="fa-solid fa-paper-plane"></i>
+    </button>
+</form>
+  
             </div>
         </div>
     </div>
@@ -153,13 +158,11 @@
 <script src="./static/js/womens_health_assessment.js"></script>
 <script src="./static/js/ortho.js"></script>
 
+<script src="./static/js/diabetes.js"></script>
+<script src="./static/js/our_specialities.js"></script>
+
 </html>
 
 
 
         
-
-
-
-
-

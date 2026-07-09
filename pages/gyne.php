@@ -212,8 +212,10 @@
                     <span class="sh-cloud-pill"><i class="fa-solid fa-check-circle"></i> Minimally Invasive Surgery</span>
                 </div>
                 
-                <a href="contact.php" class="sh-btn-primary">Book Consultation <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+                <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Check Women's Health Assessment <i class="fa-solid fa-arrow-right"></i>
+</button>
             
         </div>
     </div>
