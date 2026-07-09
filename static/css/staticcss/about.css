@@ -1,30 +1,58 @@
-:root {
-    --primary: #0f4a78;
-    --primary-dark: #08243a;
-    --secondary: #9AAF9E;
-    --text-dark: #2c3e50;
-    --text-muted: #64748b;
-    --bg-light: #f8fafc;
-    --white: #ffffff;
-    --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-}
+/* ==========================================================================
+   ALTERNATIVE PREMIUM SLATE ARCHITECTURE STYLESHEET
+   ========================================================================== */
 
-/* Global Reset for About */
-body {
-    margin: 0;
-    font-family: system-ui, -apple-system, sans-serif;
-    background-color: var(--white);
-}
-
-.container {
-    width: 90%;
-    max-width: 1300px;
+.ab-layout-container {
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
 }
 
-/* Reusable Gradient Text */
+.ab-system-badge {
+    display: inline-block;
+    color: #4f8267;
+    background-color: rgba(79, 130, 103, 0.08);
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+.ab-title-accent {
+    color: #326295;
+}
+
+.ab-centered-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 60px;
+}
+.ab-centered-header h2 { font-size: 2.5rem; color: #1a4d6c; font-weight: 800; margin: 0 0 14px 0; letter-spacing: -0.5px; }
+.ab-centered-header p { color: #60737d; font-size: 1.05rem; margin: 0; line-height: 1.6; }
+
+/* --- SECTION 1: HERO CONTAINER (Fluid Gradient & Modern Layout) --- */
+.ab-premium-hero {
+    position: relative;
+    background: linear-gradient(-45deg, #f8f9fb, #eef2ff, #f0fdf4, #f8f9fb);
+    background-size: 400% 400%;
+    animation: heroGradient 12s ease infinite;
+    padding: 140px 0 100px;
+    overflow: hidden;
+}
+
+@keyframes heroGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 .gradient-text {
-    background: linear-gradient(90deg, var(--primary), var(--secondary), #4f46e5, var(--primary));
+    background: linear-gradient(90deg, #0f4a78, #9AAF9E, #4f46e5, #0f4a78);
     background-size: 300%;
     -webkit-background-clip: text;
     color: transparent;
@@ -36,456 +64,325 @@ body {
     100% { background-position: 300%; }
 }
 
-/* Reusable Section Tag */
-.section-tag {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    background: rgba(154, 175, 158, 0.15);
-    border: 1px solid rgba(154, 175, 158, 0.3);
-    border-radius: 50px;
-    color: var(--primary);
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    margin-bottom: 20px;
-}
-
-/* ==========================
-   About Hero Section
-========================== */
-.about-hero {
-    position: relative;
-    padding: 180px 0 100px; /* Top padding clears the fixed header */
-    background: linear-gradient(-45deg, #fdfefe, #f0fdf4, #eef2ff, #f8f9fb);
-    background-size: 400% 400%;
-    animation: heroBgMove 15s ease infinite;
-    overflow: hidden;
-}
-
-@keyframes heroBgMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.about-hero-bg {
+.ab-hero-glow {
     position: absolute;
-    width: 600px;
-    height: 600px;
-    right: -100px;
-    top: -100px;
-    background: radial-gradient(circle, rgba(154,175,158,0.2) 0%, transparent 70%);
     border-radius: 50%;
-    pointer-events: none;
+    filter: blur(140px);
+    z-index: 1;
+    opacity: 0.5;
 }
+.ab-glow-left { top: -20%; left: -10%; width: 500px; height: 500px; background: rgba(154, 175, 158, 0.3); }
+.ab-glow-right { bottom: -20%; right: -10%; width: 450px; height: 450px; background: rgba(15, 74, 120, 0.15); }
 
-.about-hero .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    align-items: center;
+.ab-hero-grid-split {
     position: relative;
     z-index: 2;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 70px;
+    align-items: center;
 }
 
-.about-hero-content h1 {
-    font-size: 56px;
+.ab-main-title {
+    font-size: 4rem;
+    color: #1a4d6c;
+    font-weight: 900;
     line-height: 1.15;
-    color: var(--primary-dark);
-    margin-bottom: 25px;
+    margin: 0 0 24px 0;
+    letter-spacing: -1.5px;
+}
+
+.ab-lead-text {
+    font-size: 1.15rem;
+    color: #4a5568;
+    line-height: 1.7;
+    margin: 0 0 45px 0;
+}
+
+.ab-stats-track {
+    display: flex;
+    gap: 50px;
+}
+
+.ab-stat-item {
+    position: relative;
+}
+
+.ab-stat-item h3 {
+    font-size: 2.75rem;
+    color: #1a4d6c;
     font-weight: 800;
+    margin: 0 0 4px 0;
     letter-spacing: -1px;
 }
 
-.about-hero-content p {
-    font-size: 18px;
-    color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 40px;
-    max-width: 550px;
-}
-
-.about-stats-row {
-    display: flex;
-    gap: 40px;
-}
-
-.about-stat {
-    position: relative;
-    padding-left: 20px;
-}
-
-.about-stat::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 5px;
-    bottom: 5px;
-    width: 4px;
-    background: linear-gradient(to bottom, var(--primary), var(--secondary));
-    border-radius: 4px;
-}
-
-.about-stat h3 {
-    font-size: 36px;
-    color: var(--primary);
-    margin: 0 0 5px 0;
-    font-weight: 800;
-}
-
-.about-stat > span {
-    font-size: 14px;
-    color: var(--text-muted);
-    font-weight: 600;
+.ab-stat-item span {
+    font-size: 0.88rem;
+    color: #4f8267;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
-.about-hero-image img {
+.ab-hero-visual-frame { width: 100%; }
+.ab-media-mask {
     width: 100%;
-    height: 600px;
-    object-fit: cover;
-    border-radius: 30px;
-    box-shadow: 0 30px 60px rgba(15, 74, 120, 0.15);
+    height: 500px;
+    border-radius: 24px 4px 24px 24px;
+    overflow: hidden; 
+    box-shadow: 0 30px 60px rgba(15, 74, 120, 0.12);
+}
+.ab-media-mask img { width: 100%; height: 100%; object-fit: cover; }
+
+/* --- SECTION 2: PURPOSE TIERS (Modern Flat Minimalist Borders) --- */
+.ab-purpose-block {
+    padding: 110px 0;
+    background-color: #ffffff;
+    border-top: 1px solid #eef2f6;
 }
 
-/* ==========================
-   Mission & Vision Section
-========================== */
-.mission-vision-section {
-    padding: 120px 0;
-    background-color: var(--bg-light);
-}
-
-.mission-vision-section .section-heading {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 60px;
-}
-
-.mission-vision-section h2 {
-    font-size: 46px;
-    color: var(--primary-dark);
-    margin: 0;
-    font-weight: 800;
-}
-
-.mission-vision-section p {
-    color: var(--text-muted);
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.7;
-}
-
-.mv-grid {
+.ab-tri-tier-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 40px;
 }
 
-.mv-card {
-    background: var(--white);
-    padding: 50px 40px;
-    border-radius: 24px;
-    box-shadow: 0 15px 40px rgba(15, 74, 120, 0.05);
-    border: 1px solid rgba(15, 74, 120, 0.05);
-    transition: var(--transition-smooth);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
+.ab-purpose-card {
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 16px;
+    border: 1px solid #eef2f5;
+    transition: all 0.3s ease;
 }
 
-.mv-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease;
-    z-index: -1;
+.ab-purpose-card:hover {
+    border-color: #326295;
+    box-shadow: 0 20px 40px rgba(50, 98, 149, 0.04);
 }
 
-.mv-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(15, 74, 120, 0.1);
-}
-
-.mv-card:hover::before {
-    transform: scaleX(1);
-}
-
-.mv-icon {
-    width: 70px;
-    height: 70px;
-    background: rgba(154, 175, 158, 0.15);
-    color: var(--primary);
-    border-radius: 20px;
+.ab-purpose-icon {
+    font-size: 1.8rem;
+    color: #326295;
+    margin-bottom: 24px;
+    width: 54px;
+    height: 54px;
+    background: #f4f8fb;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
-    margin-bottom: 25px;
-    transition: var(--transition-smooth);
 }
 
-.mv-card:hover .mv-icon {
-    background: var(--primary);
-    color: var(--white);
-    transform: scale(1.1) rotate(5deg);
+.ab-purpose-card h3 {
+    font-size: 1.4rem;
+    color: #1a4d6c;
+    margin: 0 0 14px 0;
+    font-weight: 800;
 }
 
-.mv-card h3 {
-    font-size: 26px;
-    color: var(--primary-dark);
-    margin: 0 0 15px 0;
-    font-weight: 700;
+.ab-card-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #edf2f7;
+    margin-bottom: 24px;
 }
 
-.mv-card p {
-    color: var(--text-muted);
-    font-size: 16px;
-    line-height: 1.8;
+.ab-purpose-card p {
+    color: #60737d;
+    font-size: 0.98rem;
+    line-height: 1.65;
     margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-    .mv-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
+/* --- SECTION 3: STEPPED HISTORICAL TIMELINE (Dynamic Dark Luxury Contrast) --- */
+.ab-legacy-track {
+    padding: 110px 0;
+    background-color: #111a24; /* Swapped to an elegant deep slate background for contrast */
+    color: #ffffff;
 }
 
-/* ==========================
-   Our Journey / Timeline
-========================== */
-.journey-section {
-    padding: 120px 0;
-    background: var(--white);
+.ab-legacy-track .ab-centered-header h2 {
+    color: #ffffff;
 }
 
-.timeline {
+.ab-stepped-timeline {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.ab-timeline-node {
+    display: flex;
     position: relative;
-    max-width: 1000px;
-    margin: 80px auto 0;
 }
 
-.timeline::after {
+.ab-node-year {
+    width: 120px;
+    text-align: right;
+    padding-right: 40px;
+    padding-top: 24px;
+    flex-shrink: 0;
+}
+
+.ab-node-year span {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #81c798;
+}
+
+.ab-node-connector {
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.ab-node-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #81c798;
+    border-radius: 50%;
+    z-index: 2;
+    margin-top: 31px;
+}
+
+.ab-timeline-node::after {
     content: '';
     position: absolute;
-    width: 4px;
-    background: linear-gradient(to bottom, transparent, rgba(15, 74, 120, 0.15), transparent);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 4px;
-}
-
-.timeline-item {
-    padding: 10px 50px;
-    position: relative;
-    width: 50%;
-    box-sizing: border-box;
-    margin-bottom: 40px;
-}
-
-.timeline-item.left {
-    left: 0;
-    text-align: right;
-}
-
-.timeline-item.right {
-    left: 50%;
-    text-align: left;
-}
-
-.timeline-dot {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    background: var(--secondary);
-    border: 5px solid var(--white);
-    border-radius: 50%;
-    top: 15px;
+    left: 129px;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+    top: 42px;
+    bottom: -42px;
     z-index: 1;
-    box-shadow: 0 0 0 6px rgba(154, 175, 158, 0.15);
-    transition: transform 0.3s ease;
 }
 
-.timeline-item:hover .timeline-dot {
-    transform: scale(1.3);
-    background: var(--primary);
+.ab-timeline-node:last-child::after {
+    display: none;
 }
 
-.timeline-item.left .timeline-dot {
-    right: -16px;
+.ab-node-content-box {
+    flex-grow: 1;
+    padding: 26px 36px;
+    background: rgba(255, 255, 255, 0.03);
+    margin-bottom: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.timeline-item.right .timeline-dot {
-    left: -16px;
-}
-
-.timeline-content {
-    background: var(--bg-light);
-    padding: 40px 35px;
-    border-radius: 24px;
-    border: 1px solid rgba(15, 74, 120, 0.05);
-    transition: var(--transition-smooth);
-    position: relative;
-}
-
-.timeline-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(15, 74, 120, 0.08);
-    border-color: var(--secondary);
-    background: var(--white);
-}
-
-.timeline-content h3 {
-    color: var(--primary);
-    font-size: 38px;
-    font-weight: 800;
-    margin: 0 0 10px 0;
-}
-
-.timeline-content h4 {
-    color: var(--primary-dark);
-    font-size: 20px;
-    margin: 0 0 15px 0;
+.ab-node-content-box h4 {
+    margin: 0 0 6px 0;
+    font-size: 1.2rem;
+    color: #ffffff;
     font-weight: 700;
 }
 
-.timeline-content p {
-    color: var(--text-muted);
-    line-height: 1.7;
+.ab-node-content-box p {
     margin: 0;
-    font-size: 16px;
+    color: #a0aec0;
+    font-size: 0.98rem;
+    line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-    .timeline::after { left: 31px; }
-    .timeline-item { width: 100%; padding-left: 80px; padding-right: 0; text-align: left !important; }
-    .timeline-item.right { left: 0; }
-    .timeline-item.left .timeline-dot, .timeline-item.right .timeline-dot { left: 19px; }
+/* --- SECTION 4: DIRECTOR KEYNOTE PROFILE (Executive Minimalist Framing) --- */
+.ab-director-keynote {
+    padding: 110px 0;
+    background-color: #ffffff;
 }
 
-/* ==========================
-   Director's Message
-========================== */
-.director-message {
-    padding: 120px 0;
-    background: linear-gradient(135deg, #f8f9fb 0%, #eef2ff 100%);
-}
-
-.director-wrapper {
+.ab-keynote-wrapper {
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: 400px 1fr;
     gap: 80px;
     align-items: center;
 }
 
-.director-image {
+.ab-keynote-media {
     position: relative;
-}
-
-.director-image img {
     width: 100%;
-    height: 550px;
-    object-fit: cover;
-    border-radius: 30px;
-    box-shadow: 0 30px 60px rgba(15, 74, 120, 0.15);
 }
 
-.director-badge {
+.ab-keynote-img-frame {
+    width: 100%;
+    height: 460px;
+    border-radius: 4px 24px 4px 4px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(26, 77, 108, 0.05);
+}
+.ab-keynote-img-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+.ab-quote-badge {
     position: absolute;
-    bottom: 40px;
-    right: -40px;
-    width: 90px;
-    height: 90px;
-    background: var(--primary);
-    color: var(--white);
+    top: -20px;
+    left: -20px;
+    background-color: #1a4d6c;
+    color: #ffffff;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 34px;
-    border-radius: 50%;
-    box-shadow: 0 20px 40px rgba(15, 74, 120, 0.2);
-    border: 8px solid #eef2ff;
+    font-size: 1.2rem;
 }
 
-.quote-text {
-    margin: 35px 0;
-    padding-left: 25px;
-    border-left: 5px solid var(--secondary);
+.ab-keynote-details h2 { font-size: 2.75rem; color: #1a4d6c; font-weight: 900; margin: 0 0 24px 0; letter-spacing: -0.5px; }
+.ab-blockquote-text p { font-size: 1.15rem; color: #4a5568; line-height: 1.75; font-weight: 500; position: relative; margin: 0 0 35px 0; }
+.ab-keynote-sign-block h4 { font-size: 1.25rem; color: #1a4d6c; margin: 0 0 4px 0; font-weight: 800; }
+.ab-keynote-sign-block span { font-size: 0.85rem; color: #4f8267; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+/* --- SECTION 5: CERTIFICATIONS STRIP (Borderless Dynamic Layout) --- */
+.ab-certifications-panel {
+    padding: 100px 0;
+    background-color: #f8fafc;
+    border-top: 1px solid #edf2f7;
 }
 
-.quote-text p {
-    font-size: 20px;
-    font-style: italic;
-    color: var(--text-dark);
-    line-height: 1.8;
+.ab-cert-strip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+}
+
+.ab-cert-card {
+    text-align: left;
+    padding: 10px;
+    background: transparent;
+}
+
+.ab-cert-icon-wrapper {
+    font-size: 1.8rem;
+    color: #326295;
+    margin-bottom: 20px;
+}
+
+.ab-cert-card h4 {
+    font-size: 1.2rem;
+    color: #1a4d6c;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+}
+
+.ab-cert-card p {
     margin: 0;
+    color: #60737d;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
-.director-signature h4 { font-size: 26px; color: var(--primary-dark); margin: 0 0 8px 0; font-weight: 800; }
-.director-signature span { color: var(--secondary); font-weight: 700; font-size: 15px; text-transform: uppercase; letter-spacing: 1px; }
-
+/* --- RESPONSIVE ADJUSTMENTS --- */
 @media (max-width: 992px) {
-    .director-wrapper { grid-template-columns: 1fr; gap: 60px; }
-    .director-badge { right: 30px; border-color: var(--white); }
-    .director-image img { height: 450px; }
-}
-
-/* ==========================
-   Certifications
-========================== */
-.certifications-section { padding: 120px 0; background: var(--white); }
-.cert-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 60px; }
-.cert-card { text-align: center; padding: 45px 30px; background: var(--bg-light); border-radius: 24px; transition: var(--transition-smooth); border: 1px solid rgba(15, 74, 120, 0.05); position: relative; }
-.cert-card:hover { transform: translateY(-10px); background: var(--white); box-shadow: 0 20px 40px rgba(15, 74, 120, 0.08); border-color: var(--secondary); }
-.cert-icon { font-size: 45px; color: var(--secondary); margin-bottom: 25px; transition: transform 0.4s ease; }
-.cert-card:hover .cert-icon { transform: scale(1.1); color: var(--primary); }
-.cert-card h4 { color: var(--primary-dark); font-size: 19px; margin: 0 0 12px 0; font-weight: 700; }
-.cert-card p { color: var(--text-muted); font-size: 15px; line-height: 1.7; margin: 0; }
-
-@media (max-width: 992px) {
-    .cert-grid { grid-template-columns: repeat(2, 1fr); }
+    .ab-hero-grid-split, .ab-keynote-wrapper { grid-template-columns: 1fr; gap: 50px; }
+    .ab-main-title { font-size: 2.75rem; }
+    .ab-media-mask, .ab-keynote-img-frame { height: 380px; }
 }
 
 @media (max-width: 576px) {
-    .cert-grid { grid-template-columns: 1fr; }
-}
-
-/* ==========================
-   Global Card Border Animation
-========================== */
-.mv-card::after,
-.timeline-content::after,
-.cert-card::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px; /* Animated Border Thickness */
-    background: linear-gradient(90deg, var(--primary), var(--secondary), #4f46e5, var(--primary));
-    background-size: 300% 100%;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-    z-index: 10;
-    animation: cardBorderMove 4s linear infinite;
-}
-
-@keyframes cardBorderMove {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 300% 0%; }
+    .ab-stats-track { justify-content: space-between; gap: 20px; }
+    .ab-timeline-node::after { left: 19px; }
+    .ab-node-year { width: auto; text-align: left; padding-right: 0; margin-bottom: 8px; }
+    .ab-timeline-node { flex-direction: column; }
+    .ab-node-connector { display: none; }
 }

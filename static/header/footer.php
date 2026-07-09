@@ -160,6 +160,7 @@
 
 <script src="./static/js/diabetes.js"></script>
 <script src="./static/js/our_specialities.js"></script>
+<script src="./static/js/shortcutlogin.js"></script>
 
 </html>
 

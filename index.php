@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./static/header/style.css">
     <link rel="stylesheet" href="./static/css/staticcss/home.css">
-    <link rel="stylesheet" href="./static/css/staticcss/about.css">
+   <link rel="stylesheet" href="./static/css/staticcss/about.css">
     <link rel="stylesheet" href="./static/css/staticcss/testimonial.css">
     <link rel="stylesheet" href="./static/css/staticcss/ourteam.css">
     <link rel="stylesheet" href="./static/css/staticcss/gyne.css">
     <!-- <link rel="stylesheet" href="./static/css/staticcss/maternity.css"> -->
     <link rel="stylesheet" href="./static/css/staticcss/womens_health_assessment.css">
     <link rel="stylesheet" href="./static/css/staticcss/diabetes.css"> 
-    <!-- <link rel="stylesheet" href="./static/css/staticcss/diagnostics.css"> -->
+    <link rel="stylesheet" href="./static/css/staticcss/diagnostics.css">
      <link rel="stylesheet" href="./static/css/staticcss/ortho.css"> 
      <link rel="stylesheet" href="./static/css/staticcss/our_specialities.css"> 
      <link rel="stylesheet" href="./static/css/staticcss/contact.css">

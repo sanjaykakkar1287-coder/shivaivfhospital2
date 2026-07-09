@@ -1,286 +1,355 @@
-:root {
-    --primary: #0f4a78;
-    --primary-dark: #08243a;
-    --secondary: #9AAF9E;
-    --text-dark: #2c3e50;
-    --text-muted: #64748b;
-    --bg-light: #f8fafc;
-    --white: #ffffff;
-    --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-}
+/* ==========================================================================
+   DIAGNOSTICS CENTER MODERNISMS INTERFACE STYLESHEET
+   ========================================================================== */
 
-.diag-hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 180px 20px 100px;
-}
-
-.diag-hero .container {
-    width: 50vw;
-    max-width: 900px;
+.dg-container {
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
 }
 
-.diag-hero-content {
-    width: 50vw;
-    text-align: center;
+.dg-system-badge {
+    display: inline-block;
+    color: #4f8267;
+    background-color: rgba(79, 130, 103, 0.08);
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
 }
 
-.diag-hero h1 {
-    font-size: 56px;
+.dg-text-blue {
+    color: #326295;
+}
+
+/* --- SECTION 1: HERO VIEWPORTS --- */
+.dg-tech-hero {
+    position: relative;
+    background: #ffffff;
+    padding: 100px 0;
+    overflow: hidden;
+    border-bottom: 1px solid #eef2f5;
+}
+
+.dg-hero-radial {
+    position: absolute;
+    top: -30%;
+    right: -10%;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(244,248,250,0.8) 0%, rgba(255,255,255,0) 70%);
+    z-index: 1;
+}
+
+.dg-hero-split {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.dg-main-heading {
+    font-size: 3.25rem;
+    color: #1a4d6c;
     font-weight: 800;
     line-height: 1.2;
-    margin: 20px auto;
-    text-align: center;
+    margin: 0 0 20px 0;
+    letter-spacing: -1px;
 }
 
-.diag-hero p {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.section-tag{
-    display:inline-block;
-    margin-bottom:15px;
-}
-/* Diagnostics Services Section */
-.diag-services {
-    padding: 100px 0;
-    background: var(--bg-light);
-}
-
-.diag-services .section-heading h2 {
-    font-size: 46px;
-    color: var(--primary-dark);
+.dg-lead-desc {
+    font-size: 1.1rem;
+    color: #60737d;
+    line-height: 1.65;
     margin: 0;
-    font-weight: 800;
 }
 
-.diag-services .section-heading p {
-    color: var(--text-muted);
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.7;
-}
-
-/* Slider Container */
-.diag-slider-container {
-    overflow: hidden;
-    width: 100%;
-    padding: 20px 0;
-    margin-top: 30px;
-}
-
-.diag-grid {
+.dg-hero-metrics-track {
     display: flex;
-    width: max-content;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.dg-metric-pill {
+    background: #ffffff;
+    border: 1px solid #edf2f6;
+    padding: 20px 24px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 10px 25px rgba(26, 77, 108, 0.02);
+}
+
+.dg-pill-icon {
+    width: 40px;
+    height: 40px;
+    background: #f4f8fb;
+    color: #326295;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.dg-metric-pill span {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #1a4d6c;
+}
+
+/* --- SECTION 2: 3D CARD INTERACTIVES --- */
+.dg-capabilities-block {
+    padding: 100px 0;
+    background-color: #fafbfc;
+}
+
+.dg-section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+.dg-section-header h2 { font-size: 2.5rem; color: #1a4d6c; font-weight: 800; margin: 0 0 14px 0; }
+.dg-section-header p { color: #60737d; margin: 0; font-size: 1.05rem; }
+
+.dg-flip-deck-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 30px;
-    animation: slideDiagCards 30s linear infinite;
 }
 
-.diag-grid:hover {
-    animation-play-state: paused;
-}
-
-@keyframes slideDiagCards {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-50% - 15px)); } /* 15px is half of the gap */
-}
-
-/* Flip Card Styles */
-.diag-card {
-    width: 380px;
-    height: 320px;
+/* Perspective setup for pristine 3D rotation steps */
+.dg-flip-card-wrapper {
     perspective: 1200px;
-    flex-shrink: 0;
+    height: 280px;
 }
 
-.diag-card-inner {
+.dg-card-flipper {
     position: relative;
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 1s ease-in-out;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.diag-card.flip .diag-card-inner {
+.dg-flip-card-wrapper:hover .dg-card-flipper {
     transform: rotateY(180deg);
 }
 
-.diag-card-face {
+.dg-face-panel {
     position: absolute;
-    inset: 0;
-    background: var(--white);
-    border: 1px solid rgba(15, 74, 120, 0.08);
-    border-radius: 24px;
-    padding: 40px;
+    width: 100%;
+    height: 100%;
     backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    overflow: hidden;
+    border-radius: 16px;
+    padding: 40px 35px;
+    box-sizing: border-box;
+    border: 1px solid #edf2f6;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 15px 40px rgba(15, 74, 120, 0.05);
-    transition: var(--transition-smooth);
+    justify-content: flex-start;
 }
 
-.diag-card-face.back {
+.dg-face-front {
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(26, 77, 108, 0.02);
+}
+
+.dg-face-back {
+    background: #ffffff;
     transform: rotateY(180deg);
+    border-color: rgba(50, 98, 149, 0.2);
+    box-shadow: 0 15px 35px rgba(50, 98, 149, 0.05);
 }
 
-.diag-card:hover .diag-card-face {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 50px rgba(15, 74, 120, 0.1);
-    border-color: var(--secondary);
-}
-
-.diag-icon {
-    width: 70px;
-    height: 70px;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: var(--white);
-    border-radius: 20px;
+.dg-card-icon-frame {
+    width: 48px;
+    height: 48px;
+    background: #f0f6f9;
+    color: #326295;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
-    margin-bottom: 25px;
-    transition: var(--transition-smooth);
+    font-size: 1.25rem;
+    margin-bottom: 24px;
 }
 
-.diag-card:hover .diag-icon {
-    transform: scale(1.1) rotate(5deg);
+.back-icon {
+    background: #eef5f8;
 }
 
-.diag-card-face h3 {
-    font-size: 24px;
-    color: var(--primary-dark);
-    margin: 0 0 15px 0;
+.dg-face-panel h3 {
+    font-size: 1.3rem;
+    color: #1a4d6c;
+    margin: 0 0 12px 0;
     font-weight: 700;
 }
 
-.diag-card-face p {
-    color: var(--text-muted);
-    font-size: 15px;
-    line-height: 1.7;
+.dg-face-panel p {
+    color: #60737d;
+    font-size: 0.95rem;
+    line-height: 1.6;
     margin: 0;
 }
 
-/* Technology Section */
-.diag-tech {
-    padding: 100px 0;
-    background: var(--white);
+.dg-action-hint {
+    margin-top: auto;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #4f8267;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.tech-wrapper {
+/* --- SECTION 3: INFRASTRUCTURE MATRIX --- */
+.dg-infrastructure-matrix {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.dg-infra-row-split {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
     align-items: center;
 }
 
-.tech-content h2 {
-    font-size: 46px;
-    color: var(--primary-dark);
-    margin: 20px 0;
+.dg-infra-text h2 {
+    font-size: 2.5rem;
+    color: #1a4d6c;
     font-weight: 800;
+    margin: 0 0 16px 0;
 }
 
-.tech-content p {
-    color: var(--text-muted);
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 30px;
+.dg-infra-lead {
+    font-size: 1.1rem;
+    color: #60737d;
+    line-height: 1.65;
+    margin: 0 0 35px 0;
 }
 
-.tech-features {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.dg-checklist-cloud {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
 }
 
-.tech-features li {
-    color: var(--text-dark);
-    font-weight: 500;
+.dg-check-node {
     display: flex;
     align-items: center;
     gap: 12px;
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #1a4d6c;
 }
 
-.tech-features i {
-    color: var(--secondary);
-    font-size: 20px;
+.dg-check-node i {
+    color: #4f8267;
+    font-size: 1.05rem;
 }
 
-.tech-image img {
+.dg-infra-media { width: 100%; }
+.dg-media-mask-box {
     width: 100%;
-    border-radius: 24px;
-    box-shadow: 0 20px 50px rgba(15, 74, 120, 0.1);
+    height: 440px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(26, 77, 108, 0.05);
+}
+.dg-media-mask-box img { width: 100%; height: 100%; object-fit: cover; }
+
+/* --- SECTION 4: FLOATING GLASS ACTION DASHBOARD --- */
+.dg-dispatch-cta {
+    padding: 60px 0 100px 0;
+    background-color: #ffffff;
 }
 
-/* CTA Section */
-.diag-cta {
-    padding: 80px 0;
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-    text-align: center;
-    color: var(--white);
+.dg-cta-glass-dashboard {
+    background: linear-gradient(135deg, #1a4d6c 0%, #0d2b3e 100%);
+    border-radius: 16px;
+    padding: 45px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    color: #ffffff;
+    box-shadow: 0 20px 40px rgba(13, 43, 62, 0.15);
 }
 
-.diag-cta h2 {
-    font-size: 42px;
-    margin-bottom: 15px;
+.dg-cta-text-bundle h2 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    margin: 0 0 10px 0;
 }
 
-.diag-cta p {
-    font-size: 18px;
-    opacity: 0.8;
-    margin-bottom: 30px;
+.dg-cta-text-bundle p {
+    margin: 0;
+    color: #b0c4cf;
+    font-size: 0.98rem;
+    line-height: 1.5;
 }
 
-.btn-diag-cta {
+.dg-cta-trigger-btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 16px 32px;
-    border-radius: 50px;
-    background: var(--secondary);
-    color: var(--primary-dark);
-    text-decoration: none;
+    gap: 12px;
+    background: #ffffff;
+    color: #1a4d6c;
+    padding: 16px 36px;
+    border-radius: 4px;
     font-weight: 700;
-    transition: var(--transition-smooth);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-.btn-diag-cta:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+.dg-cta-trigger-btn:hover {
+    background: #326295;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+/* --- MICRO-ANIMATION PERFORMANCE STACK --- */
+.dg-card-flipper {
+    /* Ensures transform shifts ignore default timing snaps when mouse actively triggers values */
+    transition: transform 0.1s linear; 
+    will-change: transform;
 }
 
-.btn-diag-cta i {
-    transition: transform 0.3s ease;
+.dg-flip-card-wrapper:not(:hover) .dg-card-flipper {
+    /* Uses smooth easing only when resetting back to starting frame position state */
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
 }
 
-.btn-diag-cta:hover i {
-    transform: translateX(5px);
+.dg-metric-pill:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    border-color: rgba(50, 98, 149, 0.3) !important;
 }
-
-/* Responsive */
+/* --- ADAPTIVE BREAKPOINTS RESPONSIBILITY --- */
 @media (max-width: 992px) {
-    .diag-card { width: 340px; }
-    .tech-wrapper { grid-template-columns: 1fr; gap: 50px; }
+    .dg-hero-split, .dg-infra-row-split, .dg-cta-glass-dashboard { grid-template-columns: 1fr; gap: 40px; }
+    .dg-main-heading { font-size: 2.5rem; }
+    .dg-hero-metrics-track { flex-direction: row; flex-wrap: wrap; }
+    .dg-cta-glass-dashboard { flex-direction: column; text-align: center; padding: 40px; }
+    .dg-cta-trigger-btn { width: 100%; justify-content: center; }
+    .dg-media-mask-box { height: 350px; }
 }
 
-@media (max-width: 768px) {
-    .diag-hero { padding: 140px 0 60px; }
-    .diag-hero h1 { font-size: 38px; }
-    .diag-services, .diag-tech { padding: 60px 0; }
-    .diag-card { width: 300px; height: 340px; }
-    .diag-grid { gap: 20px; }
-    @keyframes slideDiagCards {
-        100% { transform: translateX(calc(-50% - 10px)); }
-    }
+@media (max-width: 576px) {
+    .dg-hero-metrics-track { flex-direction: column; }
+    .dg-metric-pill { width: 100%; }
+    .dg-flip-card-wrapper { height: 310px; }
 }
