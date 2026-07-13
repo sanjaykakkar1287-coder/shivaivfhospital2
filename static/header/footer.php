@@ -99,10 +99,11 @@
             <div class="footer-links-column">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="aboutus.php">About Us</a></li>
-                    <li><a href="our_team.php">Our Team</a></li>
-                    <li><a href="testimonial.php">Testimonials</a></li>
+                    <li><a href="" class="home-btn">Home</a></li>
+                    <li><a href="" class="about-btn">About Us</a></li>
+                    <li><a href="" class="ourteam-btn">Our Team</a></li>
+                    <li><a href="" class="testimonials-btn">Testimonials</a></li>
+                     <li><a href="" class="contact-btn">Contact Us</a></li>
                 </ul>
             </div>
 
@@ -110,12 +111,19 @@
             <div class="footer-links-column">
                 <h3>Our Services</h3>
                 <ul>
-                    <li><a href="advance_diagnostics.php">Advanced Diagnostics</a></li>
-                    <li><a href="gynecology.php">Gynecology</a></li>
-                    <li><a href="our_specialities.php">Our Specialists</a></li>
-                    <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="" class="diagnostics-btn">Advanced Diagnostics</a></li>
+                    <li><a href="" class="gyne-btn">Gynecology</a></li>
+                    <li><a href="" class="maternity-btn">Maternity</a></li>
+                    <li><a href="" class="diabetes-btn">Diabetes</a></li>
+                    <li><a href="" class="ortho-btn">Orthopedics</a></li>
+                    <li><a href="" class="emergency-btn">Emergency Services</a></li>
                 </ul>
             </div>
+
+           
+                   
+                
+            
 
             <!-- Newsletter / Contact Brief -->
             <div class="footer-action-column">
@@ -161,6 +169,7 @@
 <script src="./static/js/diabetes.js"></script>
 <script src="./static/js/our_specialities.js"></script>
 <script src="./static/js/shortcutlogin.js"></script>
+<script src="./static/js/contactF&Q.js"></script>
 
 </html>
 

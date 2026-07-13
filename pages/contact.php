@@ -171,10 +171,10 @@
         <div class="sh-er-banner-box">
             <div class="sh-er-banner-content">
                 <h3>Facing a Critical Medical Emergency?</h3>
-                <p>Do not wait for a form response if a patient requires immediate treatment. Our Level-1 Trauma care and Critical OTs are fully staffed and running right now.</p>
+                <p>Need immediate medical care? Our healthcare team is here to assist you. Please visit the hospital or call us directly for urgent cases</p>
             </div>
             <a href="tel:+917060302733" class="sh-er-banner-call-btn">
-                <i class="fa-solid fa-phone-flip"></i> Call Ambulance Now
+                <i class="fa-solid fa-phone-flip"></i> Call  Now
             </a>
         </div>
     </div>
@@ -183,49 +183,6 @@
 <!-- ===================================================
      INTERACTIVE COMPONENT JAVASCRIPT
      =================================================== -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
-$(document).ready(function(){
-    
-    // 1. FAQ Accordion Smooth Sliding Action
-    $('.sh-faq-trigger').on('click', function(){
-        let item = $(this).closest('.sh-faq-item');
-        let panel = item.find('.sh-faq-panel');
-        let icon = $(this).find('i');
-        
-        // Close other items
-        item.siblings().removeClass('open').find('.sh-faq-panel').slideUp(250);
-        item.siblings().find('.sh-faq-trigger i').removeClass('fa-minus').addClass('fa-plus');
-        
-        // Toggle current item
-        if(item.hasClass('open')) {
-            item.removeClass('open');
-            panel.slideUp(250);
-            icon.removeClass('fa-minus').addClass('fa-plus');
-        } else {
-            item.addClass('open');
-            panel.slideDown(250);
-            icon.removeClass('fa-plus').addClass('fa-minus');
-        }
-    });
-
-    // 2. Interactive Contact Form Submission Effects
-    $('#shHospitalContactForm').on('submit', function(e){
-        e.preventDefault();
-        let submitBtn = $(this).find('.sh-form-submit-btn');
-        let successAlert = $('#formSuccessMessage');
-        
-        // Add processing micro-animation
-        submitBtn.css('opacity', '0.7').find('span').text('Sending Message...');
-        
-        setTimeout(function(){
-            // Reset button state and clear values
-            submitBtn.css('opacity', '1').find('span').text('Send Message');
-            $('#shHospitalContactForm')[0].reset();
-            
-            // Slide down response banner smoothly
-            successAlert.slideDown(300).delay(4000).slideUp(300);
-        }, 1200);
-    });
-});
+ fnq()
 </script>

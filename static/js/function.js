@@ -1,4 +1,4 @@
-function pageRender(btnClass, pageUrl, callback = null, renderClass = ".pagerender") {
+function pageRender(btnClass, pageUrl, callback = null, renderClass = ".pagerender" ) {
 
     $(document).on("click", btnClass, function(e) {
 
@@ -15,6 +15,10 @@ function pageRender(btnClass, pageUrl, callback = null, renderClass = ".pagerend
             success: function(response) {
 
                 $(renderClass).html(response);
+
+                // A more reliable way to scroll to the top that works across browsers.
+                // It targets the document's scrolling element.
+                $(document.documentElement, document.body).animate({ scrollTop: 0 }, 500);
 
                 if ($.isFunction(callback)) {
                     callback();

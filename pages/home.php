@@ -44,7 +44,7 @@
 
         <div class="hero-image-wrapper">
 
-            <img src="./static/images/homeimages/hero1.jpg"
+            <img src="./static/images/homeimages/drhero.png"
                 alt="Shiva Hospital">
 
             <!-- Dynamic Card -->

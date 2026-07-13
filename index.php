@@ -23,8 +23,8 @@
      <link rel="stylesheet" href="./static/css/staticcss/contact.css">
      <link rel="icon" type="image/x-icon" href="./static/images/header/logo.jpeg">
 </head>
-<body>
-    <?php include './pages/modal/gynemodel.php';?>
+<body >
+<?php include './pages/modal/gynemodel.php';?>
 <?php include './static/header/header.php';?>
 <div class="pagerender">
        <?php include './pages/home.php'; ?> 

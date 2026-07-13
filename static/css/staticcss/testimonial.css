@@ -5,6 +5,7 @@
     background-size: 400% 400%;
     animation: heroGradient 12s ease infinite;
     text-align: center;
+    margin-top:50px;
 }
 
 .testimonial-hero .container {
