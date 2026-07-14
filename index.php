@@ -25,6 +25,7 @@
 </head>
 <body >
 <?php include './pages/modal/gynemodel.php';?>
+<?php include './pages/modal/womenhealthmodal.php'; ?>
 <?php include './static/header/header.php';?>
 <div class="pagerender">
        <?php include './pages/home.php'; ?> 

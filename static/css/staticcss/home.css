@@ -2364,3 +2364,65 @@ margin-bottom: -50px;
     }
 }
 
+
+.animated-btn {
+  position: relative;
+  border: none;
+  padding: 3px;
+  border-radius: 999px;
+  cursor: pointer;
+  background: transparent;
+  overflow: hidden;
+  margin-top:50px;
+  margin-left:35%;
+}
+
+.animated-btn::before {
+  content: "";
+  position: absolute;
+  inset: -80%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    #0f4a78 40deg,
+    #2f9fdb 90deg,
+    #9ad7f8 130deg,
+    #0f4a78 180deg,
+    transparent 360deg
+  );
+  animation: rotateBorder 3s linear infinite;
+}
+
+.animated-btn span {
+  position: relative;
+  display: block;
+  padding: 18px 38px;
+  background: #edf2ee;
+  color: #0f4a78;
+  font-size: 28px;
+  font-weight: 700;
+  border-radius: 999px;
+  z-index: 1;
+}
+
+@keyframes rotateBorder {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hover effect */
+.animated-btn:hover span {
+  background: #f4f8f5;
+  transition: .3s;
+}
+
+.animated-btn:hover::before {
+  animation-duration: 1.5s;
+}
+@media (max-width: 768px) {
+    .animated-btn {
+        margin-left:5%;
+        font-size:10px;
+    }
+}

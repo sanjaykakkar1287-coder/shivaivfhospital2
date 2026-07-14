@@ -24,7 +24,7 @@
             <div class="iphone-frame">
                 <div class="iphone-notch"></div>
                 <div class="iphone-screen">
-                    <iframe class="portrait-video" src="https://www.youtube.com/embed/7Ku0WsJ6M-Q?autoplay=1&mute=1&loop=1&playlist=7Ku0WsJ6M-Q&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe class="portrait-video" src="https://www.youtube.com/embed/KWGsaESiq_g?autoplay=1&mute=1&loop=1&playlist=KWGsaESiq_g&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
             </div>
             
@@ -32,7 +32,7 @@
             <div class="iphone-frame">
                 <div class="iphone-notch"></div>
                 <div class="iphone-screen">
-                    <iframe class="portrait-video" src="https://www.youtube.com/embed/MaqRXXHm9wg?autoplay=1&mute=1&loop=1&playlist=MaqRXXHm9wg&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe class="portrait-video" src="https://www.youtube.com/embed/QgIkAA3o8Oc?autoplay=1&mute=1&loop=1&playlist=QgIkAA3o8Oc&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -40,7 +40,7 @@
             <div class="iphone-frame">
                 <div class="iphone-notch"></div>
                 <div class="iphone-screen">
-                    <iframe class="portrait-video" src="https://www.youtube.com/embed/yCeR9HXk0s8?autoplay=1&mute=1&loop=1&playlist=yCeR9HXk0s8&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe class="portrait-video" src="https://www.youtube.com/embed/Inpn-I21hHU?autoplay=1&mute=1&loop=1&playlist=Inpn-I21hHU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -48,20 +48,90 @@
             <div class="iphone-frame">
                 <div class="iphone-notch"></div>
                 <div class="iphone-screen">
-                    <iframe class="portrait-video" src="https://www.youtube.com/embed/Q8dWGY9Lq78?autoplay=1&mute=1&loop=1&playlist=Q8dWGY9Lq78&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe class="portrait-video" src="https://www.youtube.com/embed/kof8XkA5rBc?autoplay=1&mute=1&loop=1&playlist=kof8XkA5rBc&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
             </div>
+            
+            <!-- Frame 5 -->
+            <div class="iphone-frame">
+                <div class="iphone-notch"></div>
+                <div class="iphone-screen">
+                    <iframe class="portrait-video" src="https://www.youtube.com/embed/RlywVOoCVPg?autoplay=1&mute=1&loop=1&playlist=RlywVOoCVPg&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <!-- Frame 6 -->
+            <div class="iphone-frame">
+                <div class="iphone-notch"></div>
+                <div class="iphone-screen">
+                    <iframe class="portrait-video" src="https://www.youtube.com/embed/wa_Etng_jvM?autoplay=1&mute=1&loop=1&playlist=wa_Etng_jvM&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <!-- Frame 7 -->
+            <div class="iphone-frame">
+                <div class="iphone-notch"></div>
+                <div class="iphone-screen">
+                    <iframe class="portrait-video" src="https://www.youtube.com/embed/djVenAWeWy0?autoplay=1&mute=1&loop=1&playlist=djVenAWeWy0&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <!-- Frame 8 -->
+            <div class="iphone-frame">
+                <div class="iphone-notch"></div>
+                <div class="iphone-screen">
+                    <iframe class="portrait-video" src="https://www.youtube.com/embed/4mqV-uqgMvU?autoplay=1&mute=1&loop=1&playlist=4mqV-uqgMvU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+             <!-- Frame 9 -->
+            <div class="iphone-frame">
+                <div class="iphone-notch"></div>
+                <div class="iphone-screen">
+                    <iframe class="portrait-video" src="https://www.youtube.com/embed/aPZo3Avbvo0?autoplay=1&mute=1&loop=1&playlist=aPZo3Avbvo0&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            
+             <!-- Frame 10 -->
+            <div class="iphone-frame">
+                <div class="iphone-notch"></div>
+                <div class="iphone-screen">
+                    <iframe class="portrait-video" src="https://www.youtube.com/embed/-NQhcA-mFVY?autoplay=1&mute=1&loop=1&playlist=-NQhcA-mFVY&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+             <!-- Frame 11 -->
+            <div class="iphone-frame">
+                <div class="iphone-notch"></div>
+                <div class="iphone-screen">
+                    <iframe class="portrait-video" src="https://www.youtube.com/embed/mlFXVXxbQhA?autoplay=1&mute=1&loop=1&playlist=mlFXVXxbQhA&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            
+            <!-- Frame 12 -->
+            <div class="iphone-frame">
+                <div class="iphone-notch"></div>
+                <div class="iphone-screen">
+                    <iframe class="portrait-video" src="https://www.youtube.com/embed/mlFXVXxbQhA?autoplay=1&mute=1&loop=1&playlist=mlFXVXxbQhA&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            
         </div>
     </div>
 </section>
 
 <section class="social-section">
     <div class="social-container">
-        <a href="#" class="social-btn">Instagram</a>
-        <a href="#" class="social-btn">YouTube</a>
-        <a href="#" class="social-btn">Facebook</a>
-        <a href="#" class="social-btn">LinkedIn</a>
-        <a href="#" class="social-btn">WhatsApp</a>
+        <a href="https://www.instagram.com/shivahospitalaligarh/" class="social-btn">Instagram</a>
+        <a href="https://youtube.com/@shivahospitalaligarh?si=lgsee6XyktxA6myD" class="social-btn">YouTube</a>
+        <a href="https://www.facebook.com/ShivahospitalAligarh/" class="social-btn">Facebook</a>
+       
+        <a href="https://wa.me/917060302733" class="social-btn" target="_blank">
+    WhatsApp
+</a>
     </div>
 </section>
 

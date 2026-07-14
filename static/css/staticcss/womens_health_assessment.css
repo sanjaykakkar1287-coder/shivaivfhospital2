@@ -15,8 +15,8 @@
 
 /* Base Section */
 .assessment-section {
-    padding: 160px 0 100px;
-    min-height: 100vh;
+    padding: 100px 0 100px;
+    min-height: 80vh;
     background: linear-gradient(-45deg, #fdfefe, #f0fdf4, #eef2ff, #f8f9fb);
     background-size: 400% 400%;
     animation: heroBgMove 15s ease infinite;
@@ -24,6 +24,7 @@
     overflow: hidden;
     display: flex;
     align-items: center;
+    
 }
 
 @keyframes heroBgMove {
@@ -60,7 +61,8 @@
     border-radius: 32px;
     padding: 60px 50px;
     box-shadow: 0 25px 60px rgba(15, 74, 120, 0.08);
-    text-align: center;
+    text-align: center; 
+    
 }
 
 /* Reusable Typography */

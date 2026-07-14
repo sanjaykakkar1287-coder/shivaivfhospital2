@@ -625,7 +625,56 @@
 
 </section>
 
+<section class="video-section">
+    <div class="video-container">
+        <div class="video-header">
+            <div class="tag-wrap">
+                <span class="tag-line"></span>
+                <span class="tag-text">Real Results</span>
+            </div>
+            <h2>Watch Our <span class="gradient-text">Transformations</span></h2>
+        </div>
+        
+        <div class="video-grid">
+            <!-- Frame 1 -->
+            <div class="iphone-frame">
+                <div class="iphone-notch"></div>
+                <div class="iphone-screen">
+                    <iframe class="portrait-video" src="https://www.youtube.com/embed/KWGsaESiq_g?autoplay=1&mute=1&loop=1&playlist=KWGsaESiq_g&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <!-- Frame 2 -->
+            <div class="iphone-frame">
+                <div class="iphone-notch"></div>
+                <div class="iphone-screen">
+                    <iframe class="portrait-video" src="https://www.youtube.com/embed/QgIkAA3o8Oc?autoplay=1&mute=1&loop=1&playlist=QgIkAA3o8Oc&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
 
+            <!-- Frame 3 -->
+            <div class="iphone-frame">
+                <div class="iphone-notch"></div>
+                <div class="iphone-screen">
+                    <iframe class="portrait-video" src="https://www.youtube.com/embed/Inpn-I21hHU?autoplay=1&mute=1&loop=1&playlist=Inpn-I21hHU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Frame 4 -->
+            <div class="iphone-frame">
+                <div class="iphone-notch"></div>
+                <div class="iphone-screen">
+                    <iframe class="portrait-video" src="https://www.youtube.com/embed/kof8XkA5rBc?autoplay=1&mute=1&loop=1&playlist=kof8XkA5rBc&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+                
+        </div>
+        
+    </div>
+    <button class="animated-btn testimonials-btn">
+  <span>View More Testimonials</span>
+</button>
+</section> 
 
 <!-- 6th section of page-->
 <section class="luxury-facilities-loop">
