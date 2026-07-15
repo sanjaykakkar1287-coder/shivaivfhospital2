@@ -52,7 +52,7 @@
                 <div class="db-interactive-monitor">
                     <span class="db-capsule-tag">Diabetes Expertise</span>
                     <div class="db-monitor-media">
-                        <img src="./static/images/homeimages/care.jpg" alt="Diabetes Monitoring Systems" class="db-monitor-img">
+                        <img src="./static/images/homeimages/diabetics.jpg" alt="Diabetes Monitoring Systems" class="db-monitor-img">
                     </div>
                     <div class="db-monitor-details">
                         <h3 id="dbConditionTitle">Type 2 Diabetes</h3>
@@ -235,7 +235,9 @@
                     <span class="db-check-pill"><i class="fa-solid fa-check-circle"></i> Preventive Healthcare</span>
                 </div>
                 
-                <a href="contact.php" class="db-btn-action-trigger">Book Consultation <i class="fa-solid fa-arrow-right"></i></a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop " style="font-size:14px;">
+  Request a Call Back <i class="fa-solid fa-arrow-right"></i>
+</button>
             </div>
             
         </div>

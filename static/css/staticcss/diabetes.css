@@ -139,12 +139,12 @@
 
 .db-monitor-media {
     width: 100%;
-    height: 230px;
+    height: 330px;
     border-radius: 12px;
     overflow: hidden;
     margin: 20px 0;
 }
-.db-monitor-img { width: 100%; height: 100%; object-fit: cover; }
+.db-monitor-img { width: 100%; height: 100%; object-fit:fill; }
 
 .db-monitor-details h3 { color: #1a4d6c; font-size: 1.5rem; margin: 0 0 12px 0; font-weight: 700; }
 .db-monitor-details p { color: #60737d; font-size: 0.95rem; line-height: 1.6; margin: 0 0 24px 0; }
@@ -209,7 +209,7 @@
 
 /* --- SERVICES GRID MASONRY --- */
 .db-clinical-masonry {
-    padding: 100px 0;
+    padding: 10px 0;
     background: linear-gradient(180deg, #ffffff 0%, #f6fafc 100%);
 }
 
@@ -259,7 +259,7 @@
 
 /* --- DOCTOR EXECUTIVE SHOWCASE --- */
 .db-executive-showcase {
-    padding: 100px 0;
+    padding: 10px 0;
     background: #ffffff;
 }
 

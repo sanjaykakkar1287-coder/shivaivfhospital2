@@ -42,7 +42,7 @@
                     <div class="sh-info-text">
                         <h4>General Inquiries & OPD</h4>
                         <p class="sh-detail-row"><strong>Phone:</strong> +91 7060302733</p>
-                        <p class="sh-detail-row"><strong>Email:</strong> info@shivahospital.com</p>
+                        <p class="sh-detail-row"><strong>Email:</strong> care@shivahospital.com</p>
                     </div>
                 </div>
 
@@ -51,7 +51,7 @@
                     <div class="sh-info-icon"><i class="fa-solid fa-location-dot"></i></div>
                     <div class="sh-info-text">
                         <h4>Hospital Location & Hours</h4>
-                        <p class="sh-detail-row">Shiva Hospital, Near Railway Station, G.T. Road, Karnal, Haryana</p>
+                        <p class="sh-detail-row">New Vishnupuri Colony, Ramghat Road, Aligarh, Uttar Pradesh</p>
                         <p class="sh-detail-row"><strong>OPD:</strong> Mon - Sat: 9:00 AM - 8:00 PM</p>
                         <p class="sh-detail-row"><strong>ER Unit:</strong> Open 24/7</p>
                     </div>
@@ -60,55 +60,16 @@
             </div>
 
             <!-- RIGHT COLUMN: Interactive Form -->
-            <div class="sh-contact-form-holder">
-                <div class="sh-form-header">
-                    <h3>Send Us a Message</h3>
-                    <p>Fill out the form below, and our hospital helpdesk will get back to you shortly.</p>
-                </div>
-
-                <form id="shHospitalContactForm" class="sh-modern-form" onsubmit="return false;">
-                    <div class="sh-form-row-twin">
-                        <div class="sh-form-group">
-                            <label for="patientName">Full Name *</label>
-                            <input type="text" id="patientName" required placeholder="e.g. John Doe">
-                        </div>
-                        <div class="sh-form-group">
-                            <label for="patientPhone">Phone Number *</label>
-                            <input type="tel" id="patientPhone" required placeholder="e.g. +91 98765 43210">
-                        </div>
-                    </div>
-
-                    <div class="sh-form-row-twin">
-                        <div class="sh-form-group">
-                            <label for="patientEmail">Email Address</label>
-                            <input type="email" id="patientEmail" placeholder="e.g. john@example.com">
-                        </div>
-                        <div class="sh-form-group">
-                            <label for="medicalDepartment">Select Department *</label>
-                            <select id="medicalDepartment" required>
-                                <option value="" disabled selected>Choose a specialty...</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="gynecology">Gynecology & Women's Health</option>
-                                <option value="maternity">Maternity & Obstetrics</option>
-                                <option value="orthopedics">Orthopedics & Spine</option>
-                                <option value="diabetology">Diabetology & Endocrinology</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="sh-form-group">
-                        <label for="patientMessage">Your Message / Medical Concern *</label>
-                        <textarea id="patientMessage" rows="5" required placeholder="How can our medical team help you today?"></textarea>
-                    </div>
-
-                    <button type="submit" class="sh-form-submit-btn">
-                        <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
-                    </button>
-                    
-                    <div class="sh-form-success-alert" id="formSuccessMessage">
-                        <i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent successfully. We will contact you soon.
-                    </div>
-                </form>
+            <div class="sh-contact-map-holder">
+               <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220.40497756035523!2d78.0819424680534!3d27.887250799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3974a490ccead54f%3A0x1ede2c04e6adfcca!2sShiva%20Hospital%20Aligarh%20%7C%20Advanced%20Maternity%2C%20Gynecology%2C%20Women%E2%80%99s%20Care%20%26%20Emergency%20Services!5e0!3m2!1sen!2sin!4v1784097537527!5m2!1sen!2sin"
+    width="100%"
+    height="550"
+    style="border:0; border-radius:16px;"
+    allowfullscreen
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
             </div>
 
         </div>

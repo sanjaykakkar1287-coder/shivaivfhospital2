@@ -141,7 +141,7 @@
    SECTION 2: CONDITIONS TIMELINE (sh-conditions-timeline)
    ========================================================================== */
 .sh-conditions-timeline {
-    padding: 100px 0;
+    padding: 10px 0;
     background: #ffffff;
 }
 
@@ -166,7 +166,7 @@
 
 .sh-media-frame {
     width: 100%;
-    height: 220px;
+    height: 320px;
     border-radius: 16px;
     overflow: hidden;
     margin: 20px 0;
@@ -175,7 +175,7 @@
 .sh-panel-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .sh-interactive-details h3 {
@@ -254,7 +254,7 @@
    SECTION 3: COMPREHENSIVE SERVICES GRID (sh-services-block)
    ========================================================================== */
 .sh-services-block {
-    padding: 100px 0;
+    padding: 10px 0;
     background: var(--bg-light-gradient);
 }
 
@@ -323,7 +323,7 @@
    SECTION 4: LEAD SPECIALIST PROFILE (sh-expert-profile)
    ========================================================================== */
 .sh-expert-profile {
-    padding: 100px 0;
+    padding: 50px 0;
     background: #ffffff;
 }
 

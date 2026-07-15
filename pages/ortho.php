@@ -70,7 +70,7 @@
                     </div>
                 </div>
                 <div class="ortho-display-media">
-                    <img src="./static/images/homeimages/ortho2.jpg" alt="Orthopedic Condition Treatment" id="orthoImage">
+                    <img src="./static/images/homeimages/ortho3.jpg" alt="Orthopedic Condition Treatment" id="orthoImage">
                 </div>
             </div>
         </div>
@@ -168,7 +168,7 @@
                 </div>
             </div>
 
-            <!-- Specialist 2 -->
+            <!-- Specialist 2
             <div class="ortho-member-card">
                 <div class="ortho-avatar-box">
                     <img src="./static/images/doctors/doctor1.jpg" alt="Dr. Alok Sharma">
@@ -180,7 +180,7 @@
                     <p>Expert in arthroscopic surgeries, ACL reconstruction, and advanced sports trauma care.</p>
                     <a href="contact.php" class="ortho-action-link">Book Consultation <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Specialist 3 -->
             <div class="ortho-member-card">

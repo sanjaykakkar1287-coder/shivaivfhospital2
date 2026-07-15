@@ -170,6 +170,7 @@
 <script src="./static/js/our_specialities.js"></script>
 <script src="./static/js/shortcutlogin.js"></script>
 <script src="./static/js/contactF&Q.js"></script>
+<script src="./static/js/disableright.js"></script>
 
 </html>
 
